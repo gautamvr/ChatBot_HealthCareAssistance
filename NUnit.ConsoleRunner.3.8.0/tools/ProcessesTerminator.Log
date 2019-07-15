@@ -1,0 +1,90 @@
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.MDBroker', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.MDBroker' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Publisher', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Publisher' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelResponse', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelResponse' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Response', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Response' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Router', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Router' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Subscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Subscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.MDBroker', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.MDBroker' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Publisher', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Publisher' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelResponse', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelResponse' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Response', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Response' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Router', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Router' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Subscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Subscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Broker', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Broker' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Publisher', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Publisher' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelResponse', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelResponse' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Response', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Response' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Router', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Router' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Subscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Subscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Broker', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Broker' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Publisher', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Publisher' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelResponse', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelResponse' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Response', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Response' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Router', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Router' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Subscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Subscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Broker', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Broker' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Reliability.Util.NumberOfTopicsPublisherSubscriberService' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Publisher', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Publisher' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelResponse', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelResponse' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.RelSubscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Response', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Response' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Router', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Router' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.Subscriber', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.Subscriber' not running
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService', Kill: True
+Philips.DI.Services.Util.ProcessesCleanUp.exe Information: 0 : Process 'Philips.DI.Services.Messaging.Comp.Util.UniqueMessagePublisherSubscriberService' not running

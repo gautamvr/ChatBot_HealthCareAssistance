@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="0" result="Failed" label="Invalid" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.8.0.0" clr-version="4.0.30319.42000" start-time="2019-02-01 11:05:52Z" end-time="2019-02-01 11:05:52Z" duration="0.271874">
+  <command-line><![CDATA[nunit3-console.exe  ""C:\Program" --result="Files"]]></command-line>
+  <test-suite type="Unknown" id="0-1" name="Program --result=Files" fullname="C:\Program --result=Files" testcasecount="0" runstate="NotRunnable" result="Failed" label="Invalid">
+    <properties>
+      <property name="_SKIPREASON" value="File not found: C:\Program --result=Files" />
+    </properties>
+    <reason>
+      <message>File not found: C:\Program --result=Files</message>
+    </reason>
+  </test-suite>
+</test-run>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.8.0.0" clr-version="4.0.30319.42000" start-time="2019-07-15 10:53:13Z" end-time="2019-07-15 10:53:14Z" duration="0.738372">
+  <command-line><![CDATA[nunit3-console.exe  "C:\Users\320050834\source\repos\CaseStudy\HelloWorld\bin\Debug\HelloWorld.exe" --result="logs.txt"]]></command-line>
+  <test-suite type="Assembly" id="0-1003" name="HelloWorld.exe" fullname="C:\Users\320050834\source\repos\CaseStudy\HelloWorld\bin\Debug\HelloWorld.exe" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-07-15 10:53:14Z" end-time="2019-07-15 10:53:14Z" duration="0.027700" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\DINxGenHost\INSTALLERS\NUnit.ConsoleRunner.3.8.0\tools" machine-name="YY166624" user="320050834" user-domain="CODE1" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\DINxGenHost\INSTALLERS\NUnit.ConsoleRunner.3.8.0\tools" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="True" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="20644" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1004" name="HelloWorld" fullname="HelloWorld" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-07-15 10:53:14Z" end-time="2019-07-15 10:53:14Z" duration="0.016037" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+      <test-suite type="TestFixture" id="0-1000" name="HelloWorldTest" fullname="HelloWorld.HelloWorldTest" classname="HelloWorld.HelloWorldTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-07-15 10:53:14Z" end-time="2019-07-15 10:53:14Z" duration="0.014146" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+        <test-suite type="ParameterizedMethod" id="0-1002" name="HelloWorldStringTest" fullname="HelloWorld.HelloWorldTest.HelloWorldStringTest" classname="HelloWorld.HelloWorldTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-07-15 10:53:14Z" end-time="2019-07-15 10:53:14Z" duration="0.011057" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-case id="0-1001" name="HelloWorldStringTest()" fullname="HelloWorld.HelloWorldTest.HelloWorldStringTest()" methodname="HelloWorldStringTest" classname="HelloWorld.HelloWorldTest" runstate="Runnable" seed="200223615" result="Passed" start-time="2019-07-15 10:53:14Z" end-time="2019-07-15 10:53:14Z" duration="0.008143" asserts="1" />
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

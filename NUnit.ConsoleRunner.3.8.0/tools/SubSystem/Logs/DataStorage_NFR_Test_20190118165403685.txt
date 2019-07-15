@@ -1,0 +1,66 @@
+
+1/18/2019 : 4:54:03 PM : ============================================================================================= 
+
+1/18/2019 : 4:54:03 PM : TestID: 16550 (SoftwareInfraServices.DataStorageService.StoreDataFromMultipleClients)
+
+1/18/2019 : 4:54:03 PM : Concurrent Store Actions: 
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D1 --- Data: ABC
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D2 --- Data: DEF
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D3 --- Data: PQR
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D7 --- Data: STD
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D8 --- Data: ISD
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D9 --- Data: XYZ
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D4 --- Data: JJJ
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D5 --- Data: KKK
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D6 --- Data: LLL
+
+1/18/2019 : 4:54:03 PM : ------------------------------------------------------------------------------------- 
+
+1/18/2019 : 4:54:03 PM : Concurrent Retrieval Results: 
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D1 --- Data: ABC
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D7 --- Data: STD
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D2 --- Data: DEF
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D8 --- Data: ISD
+
+1/18/2019 : 4:54:03 PM : Client(1) -> Bucket key: G1 --- Data key: D3 --- Data: PQR
+
+1/18/2019 : 4:54:03 PM : Client(3) -> Bucket key: G3 --- Data key: D9 --- Data: XYZ
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D4 --- Data: JJJ
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D5 --- Data: KKK
+
+1/18/2019 : 4:54:03 PM : Client(2) -> Bucket key: G2 --- Data key: D6 --- Data: LLL
+
+1/18/2019 : 4:54:03 PM : ============================================================================================= 
+
+1/18/2019 : 4:54:03 PM : ============================================================================================= 
+
+1/18/2019 : 4:54:03 PM : TestID: 16551 (SoftwareInfraServices.DataStorageService.StoredDataSize)
+
+1/18/2019 : 4:54:03 PM : Action: 
+
+1/18/2019 : 4:54:03 PM : Store for Bucket key: G3 --- Data key: D7 --- Data size: 1048576
+
+1/18/2019 : 4:54:03 PM :  
+
+1/18/2019 : 4:54:03 PM : Result: 
+
+1/18/2019 : 4:54:03 PM : Retrieve with Data key: D7
+
+1/18/2019 : 4:54:03 PM : Size of stored data for key (D7) is : 1048576
+
+1/18/2019 : 4:54:03 PM : ============================================================================================= 
