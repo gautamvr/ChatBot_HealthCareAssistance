@@ -9,5 +9,5 @@ This repo also has NUnit console runner tool, which can be used to run the test 
 
 It has a batch file *AutoBuildTest.bat* which can be run to test the project after making any changes in the codes.
 
-This batch file builds, runs and reports a pass-fail-status. It gives an exit-code of 0 for success and non-zero for failure. This exit-code needs to be a summary of all tests performed.
+This batch file builds, runs and reports a pass-fail-status. It gives an exit-code of 0 for success and non-zero for failure. This exit-code gives a summary of all tests performed.
   
