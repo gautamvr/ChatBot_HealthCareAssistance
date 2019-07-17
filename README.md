@@ -1,5 +1,5 @@
 # Hello World Program
-A simple basic C# project with the code which prints "Hello World" in the console application
+A solution file which has a simple C# project with the code which prints "Hello World" in the console application
 
 It has the test project included which checks whether it prints the desired output (*Hello world*)
 
