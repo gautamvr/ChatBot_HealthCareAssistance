@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHATBOT", "CHATBOT\CHATBOT.csproj", "{298A457F-9670-489F-90BE-7A16F88E51F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{5C6A3134-8C87-4BF6-A45E-ADFA7B6E6E82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{298A457F-9670-489F-90BE-7A16F88E51F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{298A457F-9670-489F-90BE-7A16F88E51F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{298A457F-9670-489F-90BE-7A16F88E51F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6A3134-8C87-4BF6-A45E-ADFA7B6E6E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6A3134-8C87-4BF6-A45E-ADFA7B6E6E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6A3134-8C87-4BF6-A45E-ADFA7B6E6E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6A3134-8C87-4BF6-A45E-ADFA7B6E6E82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
