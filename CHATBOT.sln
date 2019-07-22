@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHATBOT", "CHATBOT\CHATBOT.csproj", "{298A457F-9670-489F-90BE-7A16F88E51F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UILayer", "CHATBOT\UILayer.csproj", "{298A457F-9670-489F-90BE-7A16F88E51F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{ACB6CCB5-4450-4B97-B8FA-00BA541153ED}"
 EndProject
