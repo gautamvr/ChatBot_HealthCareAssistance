@@ -25,13 +25,22 @@ namespace UILayer
             Console.WriteLine(you+"{0}",t);
             if (t.Contains("monitor"))
             {
-                Console.WriteLine(cpu+"Categories and Series Names are mentioned below:\n");
-                Console.WriteLine(BusinessLogic.GetSerialName());
-                Console.WriteLine(cpu+" Select the Category you want to purchase?");
-                string s=Console.ReadLine().ToLower();
-                Console.WriteLine(you + "{0}", s);
-                Console.WriteLine(cpu + "Model Numbers are mentioned below:\n");
-                Console.WriteLine(BusinessLogic.GetModels(s));
+                //Console.WriteLine(cpu+"Categories and Series Names are mentioned below:\n");
+                //Console.WriteLine(BusinessLogic.GetSerialName());
+                //Console.WriteLine(cpu+" Select the Category you want to purchase?");
+                //string Category=Console.ReadLine().ToLower();
+                //Console.WriteLine(you + "{0}", Category);
+                //Console.WriteLine(cpu + "Model Numbers are mentioned below:\n");
+                //Console.WriteLine(BusinessLogic.GetModels(Category));
+                //Console.WriteLine(cpu +"Select the model you want to enquire about\n");
+                //string ModelName = Console.ReadLine();
+                //Console.WriteLine(you + "{0}", ModelName);
+                //Console.WriteLine((BusinessLogic.GetSpecification(Category,ModelName)));//************************************
+                Console.WriteLine(cpu +"Select the monitor of your specifications");
+                string UserQuery = Console.ReadLine().ToLower();
+                Console.WriteLine(you + "{0}", UserQuery);
+                Console.WriteLine(cpu + "Model Numbers according to your specifications are:\n");
+                Console.WriteLine((BusinessLogic.GetModelOnSpecifications(UserQuery)));
                 Console.ReadLine();
             }
 

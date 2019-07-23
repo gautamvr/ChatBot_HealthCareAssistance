@@ -14,7 +14,7 @@ namespace DataLayer
     {
         
         
-        public static string SetupSqlConnection(string query)
+        public static string SetupSqlConnection(string query,int t)
         {
             string str=null;
             string provider = ConfigurationManager.AppSettings["provider"];
@@ -41,9 +41,11 @@ namespace DataLayer
                 DbDataReader dataReader = command.ExecuteReader(CommandBehavior.CloseConnection);
                 while (dataReader.Read())
                 {
-
-                    str = str + dataReader.GetString(0);
-                    str = str + "\n";
+                    for (int i = 0; i <= t; i++)
+                    {
+                        str = str + dataReader.GetString(i);
+                        str = str + "\n";
+                    }
                 }
 
                 return str;
