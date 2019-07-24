@@ -33,20 +33,57 @@ namespace BusinessLayer
 
         public static string GetModelOnSpecifications(string UserQuery)
         {
+            
+
+
+            //portablity and touch screen
             if (UserQuery.Contains("non-portable"))
+            {
+                if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='4.5'' Touch Screen'", 0);
+                if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+                if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='9'' Touch Screen'", 0);
+                if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='12'' Touch Screen'", 0);
+                if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='15'' Touch Screen'", 0);
+            }
+
+            else if (UserQuery.Contains("portable") && !(UserQuery.Contains("touch screen")))
+            {
+                if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable' and Spec2='4.5'' Touch Screen'", 0);
+                if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+                if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable' and Spec2='9'' Touch Screen'", 0);
+                if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable' and Spec2='12'' Touch Screen'", 0);
+                if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
+                    return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable' and Spec2='15'' Touch Screen'", 0);
+            }
+            //portablity only
+            if (UserQuery.Contains("non-portable") && !(UserQuery.Contains("touch screen")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable'", 0);
-            else if (UserQuery.Contains("portable"))
+            else if (UserQuery.Contains("portable") && !(UserQuery.Contains("touch screen")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable'", 0);
-            if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
+
+
+            //touch screen only
+            if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen")&& !(UserQuery.Contains("portable"))&& !(UserQuery.Contains("non-portable")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='4.5'' Touch Screen'", 0);
-            if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
+            if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) && !(UserQuery.Contains("non-portable")))
+                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+            if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) && !(UserQuery.Contains("non-portable")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='9'' Touch Screen'", 0);
-            if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
+            if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) && !(UserQuery.Contains("non-portable")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='12'' Touch Screen'", 0);
-            if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
+            if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) && !(UserQuery.Contains("non-portable")))
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='15'' Touch Screen'", 0);
 
-            else return "0";
+            return "not available.";
         }
     }
     
