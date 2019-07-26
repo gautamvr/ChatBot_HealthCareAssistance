@@ -16,7 +16,7 @@ namespace DataLayer
         
         public static string SetupSqlConnection(string query,int t)
         {
-            string str=null;
+            string str="";
             string provider = ConfigurationManager.AppSettings["provider"];
             string connectionString = ConfigurationManager.AppSettings["connectionString"];
             DbProviderFactory factory = DbProviderFactories.GetFactory(provider);
@@ -43,8 +43,7 @@ namespace DataLayer
                 {
                     for (int i = 0; i <= t; i++)
                     {
-                        str = str + dataReader.GetString(i);
-                        str = str + "\n";
+                        str = str + dataReader.GetString(i)+"\n";
                     }
                 }
 
