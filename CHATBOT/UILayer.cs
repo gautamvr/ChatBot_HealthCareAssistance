@@ -103,12 +103,18 @@ namespace UILayer
             string allDistinctSpecs = MonitorLogic.GetDistinctSpecs();
             allDistinctSpecs = allDistinctSpecs.ToLower();
             string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
-            Console.WriteLine(allDistinctSpecs);
             while (!(allDistinctSpecs.Contains(UserQuery)))
             {
-                UserQuery = Bot.Prompt("Sorry, No monitor is available for this specification.Please tell us any other specification.");
+                UserQuerySentence = Bot.Prompt("Sorry, No monitor is available for this specification.Please tell us any other specification.");
+                if (UserQuerySentence.Contains("show") || UserQuerySentence.Contains("all") ||
+                    UserQuerySentence.Contains("what"))
+                {
+                    Bot.PrintData(allDistinctSpecs);
+                    UserQuerySentence=Bot.Prompt("Here you go, These are all the different specifications that the monitors have. Please specify your need");
+                }
+                UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
             }
-            Bot.PrintLine("Model Numbers according to your required specifications are: ");
+            Bot.PrintLine("Model Numbers with {0} as a specification are: ",UserQuery);
             string modelsOnSpecs = MonitorLogic.GetModelOnSpecifications(UserQuery);
             Bot.PrintData(modelsOnSpecs);
             string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
@@ -118,14 +124,17 @@ namespace UILayer
                 while (!modelsOnSpecs.Contains(modelName))
                 {
                     modelNameSentence = Bot.Prompt(
-                        "The model you selected does not have your required specifications or is not available with us. Please enter the model name which has {0} as the specification",
+                        "The model you selected does not have {0} as a specification or is not available with us. Please enter the model name which has {0} as the specification",
                         UserQuery);
                     modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
-
-
                 }
                 Bot.PrintData(MonitorLogic.GetSpecification(modelName));
                 modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
+                if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
+                {
+                    Bot.PrintData(modelsOnSpecs);
+                    modelNameSentence=Bot.Prompt("Here you go, These are the models of the specification '{0}'. Please choose one",UserQuery);
+                }
                 modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
                  if (modelNameSentence.Contains("no"))
                  {
@@ -161,6 +170,11 @@ namespace UILayer
                 }
                 Bot.PrintData(MonitorLogic.GetSpecification(modelName));
                 modelNameSentence=Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
+                if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
+                {
+                    Bot.PrintData(modelOnCategory);
+                    modelNameSentence=Bot.Prompt("Here you go, These are the models of category '{0}'.Please choose one",category);
+                }
                 modelName = Logic.ExtractKeyword(modelOnCategory, modelNameSentence).ToUpper();
                 if (modelNameSentence.Contains("no"))
                 {
@@ -198,10 +212,9 @@ namespace UILayer
         private static void SolutionsBasedOnPurpose()
         {
             string userQuery = Bot.Prompt("What is the purpose of the solution you need?");
-            
-            string solution = SolutionLogic.GetPurpose(userQuery);
             while (true)
             {
+                string solution = SolutionLogic.GetPurpose(userQuery);
                 while (String.Equals(solution, "null"))
                 {
                     userQuery = Bot.Prompt(
@@ -211,8 +224,8 @@ namespace UILayer
                 }
                 Bot.PrintLine("These are possible Solutions we offer that could match your requirement : ");
                 Bot.PrintData(solution);
-                string reply=Bot.Prompt("Do you want to look for more Solutions based on different purpose of your choice? If Yes, Mention your purpose");
-                if (reply.Contains("no"))
+                userQuery=Bot.Prompt("Do you want to look for more Solutions based on different purpose of your choice? If Yes, Mention your purpose");
+                if (userQuery.Contains("no"))
                 {
                     return;
                 }
@@ -237,6 +250,11 @@ namespace UILayer
                 }
                 ShowSolution(type);
                 typeSentence=Bot.Prompt("Do you want to explore other solution types? If Yes, enter the type of the solution.");
+                if (typeSentence.Contains("what") || typeSentence.Contains("show"))
+                {
+                    Bot.PrintData(allCategory);
+                    typeSentence = Bot.Prompt("Here you go, Choose one from the above types of solution");
+                }
                 type = Logic.ExtractKeyword(allCategory, typeSentence);
                 if (typeSentence.Contains("no"))
                 {
@@ -251,22 +269,28 @@ namespace UILayer
             string allSolutions = SolutionLogic.GetSolution(type);
             Bot.PrintData(allSolutions);
             allSolutions = allSolutions.ToLower();
-            string name = Bot.Prompt("Which solution of above are you interested to know more about?");
+            string solnNameSentence = Bot.Prompt("Which solution of above are you interested to know more about?");
+            string solnName = Logic.ExtractKeyword(allSolutions, solnNameSentence);
             while (true)
             {
-                while (!allSolutions.Contains(name))
+                while (!allSolutions.Contains(solnName))
                 {
-                    name = Bot.Prompt(
+                    solnNameSentence = Bot.Prompt(
                         "I'm sorry, We don't have a solution in that name. Please choose one of the above solutions to display it's description.");
+                    solnName = Logic.ExtractKeyword(allSolutions, solnNameSentence);
                 }
-
                 Bot.PrintLine("The solution description is :");
-                Bot.PrintData(SolutionLogic.GetDescription(name));
-                string more = Bot.Prompt("Do you want to look for more solutions of the type '{0}' ?", type);
-                if (more.Contains("no"))
+                Bot.PrintData(SolutionLogic.GetDescription(solnName));
+                solnNameSentence = Bot.Prompt("Do you want to look for more solutions of the type '{0}' ? Mention the solution you want to choose.", type);
+                if (solnNameSentence.Contains("what") || solnNameSentence.Contains("show"))
+                {
+                    Bot.PrintData(allSolutions);
+                    solnNameSentence = Bot.Prompt("Here you go, Choose one from the above solutions to know more.");
+                }
+                solnName = Logic.ExtractKeyword(allSolutions, solnNameSentence);
+                if (solnNameSentence.Contains("no"))
                 {
                     return;
-
                 }
             }
 

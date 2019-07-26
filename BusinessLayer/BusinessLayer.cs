@@ -200,7 +200,7 @@ namespace BusinessLayer
                 return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='15'' Touch Screen'",
                     0);
 
-            return "not available.";
+            return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='"+UserQuery+"' or Spec2='"+UserQuery+"' or Spec3='"+UserQuery+"'",0);
         }
     }
 
@@ -248,15 +248,10 @@ namespace BusinessLayer
                     "Select Name,Description,url from Solutions where Category = 'EWES' ", 2);
             }
 
-
             else
             {
                 return "null";
             }
-
-
         }
-
-
     }
 }
