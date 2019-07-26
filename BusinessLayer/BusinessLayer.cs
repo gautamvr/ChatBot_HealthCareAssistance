@@ -77,27 +77,18 @@ namespace BusinessLayer
 
         public static string ExtractKeyword(string data, string sent)
         {
-            //sent = sent.ToLower();
-            //data = data.ToLower();
-            ////HashSet<string> hashset = ParseToHashSet(sent);
-            //string[] strBase = data.Split('\n');
-            
-            //HashSet<string> emptySet = new HashSet<string>();
-            //Console.WriteLine(strBase.Length);
-            //int oldHashLength = hashset.Count();
-            //foreach (var str in strBase)
-            //{
-            //    hashset.Add(str);
-            //}
-
-            //int newHashLength = hashset.Count();
-            //if (newHashLength == oldHashLength)
-            //{
-
-            //}
-
-
-            return sent;
+            sent = sent.ToLower();
+            data = data.ToLower();
+            string[] strBase = data.Split('\n');
+            foreach (string str in strBase)
+            {
+                string newStr = str.TrimEnd();
+                if (sent.Contains(newStr))
+                {
+                    return newStr;
+                }
+            }
+            return "null";
         }
 
     }
@@ -117,8 +108,7 @@ namespace BusinessLayer
 
         public static string GetDistinctSpecs()
         {
-            string totalSpecs;
-            totalSpecs = AccessDataBase.SetupSqlConnection("Select Distinct Spec1 from Monitors", 0) +
+            string totalSpecs = AccessDataBase.SetupSqlConnection("Select Distinct Spec1 from Monitors", 0) +
                          AccessDataBase.SetupSqlConnection("Select Distinct Spec2 from Monitors", 0) +
                          AccessDataBase.SetupSqlConnection("Select Distinct Spec3 from Monitors", 0);
             return totalSpecs;
@@ -133,7 +123,7 @@ namespace BusinessLayer
         public static string GetSpecification(string m)
         {
             return AccessDataBase.SetupSqlConnection(
-                "Select ModelNo,Spec1,Spec2,Spec3 from Monitors where ModelNo='" + m + "'", 3);
+                "Select ModelNo,Spec1,Spec2,Spec3,url from Monitors where ModelNo='" + m + "'", 4);
         }
 
         public static string GetModelOnSpecifications(string UserQuery)
