@@ -80,15 +80,19 @@ namespace BusinessLayer
             sent = sent.ToLower();
             data = data.ToLower();
             string[] strBase = data.Split('\n');
+            
             foreach (string str in strBase)
             {
                 string newStr = str.TrimEnd();
-                if (sent.Contains(newStr))
+                if (newStr != "")
                 {
-                    return newStr;
+                    if (sent.Contains(newStr))
+                    {
+                        return newStr;
+                    }
                 }
             }
-            return "null";
+            return sent;
         }
 
     }
@@ -108,8 +112,8 @@ namespace BusinessLayer
 
         public static string GetDistinctSpecs()
         {
-            string totalSpecs = AccessDataBase.SetupSqlConnection("Select Distinct Spec1 from Monitors", 0) +
-                         AccessDataBase.SetupSqlConnection("Select Distinct Spec2 from Monitors", 0) +
+            string totalSpecs = AccessDataBase.SetupSqlConnection("Select Distinct Spec1 from Monitors", 0) +"\n"+
+                         AccessDataBase.SetupSqlConnection("Select Distinct Spec2 from Monitors", 0) +"\n"+
                          AccessDataBase.SetupSqlConnection("Select Distinct Spec3 from Monitors", 0);
             return totalSpecs;
 

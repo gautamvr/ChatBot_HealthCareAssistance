@@ -72,7 +72,11 @@ namespace UILayer
             {
                 string again = "";
                 string userChoice = Bot.Prompt("Do you want monitor based on categories or specifications?");
-                while (!userChoice.Contains("category") && !userChoice.Contains("categories") &&
+                //if (userChoice.Contains("back") || userChoice.Contains("previous"))
+                //{
+                //    return;
+                //}
+                while ((!userChoice.Contains("category") && !userChoice.Contains("categories")) &&
                        !userChoice.Contains("spec"))
                 {
                     userChoice = Bot.Prompt("Sorry, I did not understand you. Can you please be more specific?");
@@ -95,9 +99,11 @@ namespace UILayer
 
         private static void GetMonitorsBasedOnSpecs()
         {
-            string UserQuery = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
+            string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
             string allDistinctSpecs = MonitorLogic.GetDistinctSpecs();
             allDistinctSpecs = allDistinctSpecs.ToLower();
+            string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
+            Console.WriteLine(allDistinctSpecs);
             while (!(allDistinctSpecs.Contains(UserQuery)))
             {
                 UserQuery = Bot.Prompt("Sorry, No monitor is available for this specification.Please tell us any other specification.");
@@ -106,7 +112,7 @@ namespace UILayer
             string modelsOnSpecs = MonitorLogic.GetModelOnSpecifications(UserQuery);
             Bot.PrintData(modelsOnSpecs);
             string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
-            string modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence);
+            string modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
             while (true)
             {
                 while (!modelsOnSpecs.Contains(modelName))
@@ -121,7 +127,7 @@ namespace UILayer
                 Bot.PrintData(MonitorLogic.GetSpecification(modelName));
                 modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
-                 if (modelName.Contains("NO"))
+                 if (modelNameSentence.Contains("no"))
                  {
                      return;
                  }
@@ -135,7 +141,7 @@ namespace UILayer
             Bot.PrintData(allCategories);
             string categorySentence = Bot.Prompt("Select the Category you want to purchase?");
             string category = Logic.ExtractKeyword(allCategories, categorySentence);
-            while (!allCategories.Contains(category))
+            while (!allCategories.Contains(category)&&category.Contains(""))
             {
                 categorySentence=Bot.Prompt("Sorry, This category is not available. Please enter the available categories with us.");
                 category = Logic.ExtractKeyword(allCategories, categorySentence);
@@ -156,7 +162,7 @@ namespace UILayer
                 Bot.PrintData(MonitorLogic.GetSpecification(modelName));
                 modelNameSentence=Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 modelName = Logic.ExtractKeyword(modelOnCategory, modelNameSentence).ToUpper();
-                if (modelName.Contains("NO"))
+                if (modelNameSentence.Contains("no"))
                 {
                     return;
                 }
@@ -192,6 +198,7 @@ namespace UILayer
         private static void SolutionsBasedOnPurpose()
         {
             string userQuery = Bot.Prompt("What is the purpose of the solution you need?");
+            
             string solution = SolutionLogic.GetPurpose(userQuery);
             while (true)
             {
@@ -217,17 +224,21 @@ namespace UILayer
             Bot.PrintLine("The various types of solution are given below:");
             string allCategory= SolutionLogic.GetSolutionName();
             Bot.PrintData(allCategory);
-            string type = Bot.Prompt("Select the type of solution you want to purchase?");
+            allCategory = allCategory.ToLower();
+            string typeSentence = Bot.Prompt("Select the type of solution you want to purchase?");
+            string type = Logic.ExtractKeyword(allCategory, typeSentence);
             while (true)
             {
                 while (!allCategory.Contains(type))
                 {
-                    type = Bot.Prompt(
+                    typeSentence = Bot.Prompt(
                         "I'm sorry, We don't have the type of solution you mentioned. Please choose one from above types");
+                    type = Logic.ExtractKeyword(allCategory, typeSentence);
                 }
                 ShowSolution(type);
-                string moreType=Bot.Prompt("Do you want to explore other solution types? If Yes, enter the type of the solution.");
-                if (moreType.Contains("no"))
+                typeSentence=Bot.Prompt("Do you want to explore other solution types? If Yes, enter the type of the solution.");
+                type = Logic.ExtractKeyword(allCategory, typeSentence);
+                if (typeSentence.Contains("no"))
                 {
                     return;
                 }
@@ -239,7 +250,8 @@ namespace UILayer
             Bot.PrintLine("Available solutions of the type '{0}' are mentioned below:", type);
             string allSolutions = SolutionLogic.GetSolution(type);
             Bot.PrintData(allSolutions);
-            string name = Bot.Prompt("Which solution's description are you interested in?");
+            allSolutions = allSolutions.ToLower();
+            string name = Bot.Prompt("Which solution of above are you interested to know more about?");
             while (true)
             {
                 while (!allSolutions.Contains(name))
