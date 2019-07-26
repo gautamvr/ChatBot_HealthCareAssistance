@@ -72,6 +72,11 @@ namespace UILayer
             {
                 string again = "";
                 string userChoice = Bot.Prompt("Do you want monitor based on categories or specifications?");
+                while (!userChoice.Contains("category") && !userChoice.Contains("categories") &&
+                       !userChoice.Contains("spec"))
+                {
+                    userChoice = Bot.Prompt("Sorry, I did not understand you. Can you please be more specific?");
+                }
                 if (userChoice.Contains("category") || userChoice.Contains("categories"))
                 {
                     GetMonitorsBasedOnCategory();
@@ -80,11 +85,6 @@ namespace UILayer
                 {
                     GetMonitorsBasedOnSpecs();
                 }
-                else
-                {
-                    userChoice = Bot.Prompt("Sorry, I did not understand you. Can you please be more specific?");
-                }
-
                 again = Bot.Prompt("Do you want to look for more products?");
                 if (again.Contains("no"))
                 {

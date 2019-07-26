@@ -81,16 +81,13 @@ namespace BusinessLayer
             //data = data.ToLower();
             ////HashSet<string> hashset = ParseToHashSet(sent);
             //string[] strBase = data.Split('\n');
-            //foreach (string str in strBase)
-            //{
-            //    string[][
-            //}
-            //HashSet<string> emptySet=new HashSet<string>();
+            
+            //HashSet<string> emptySet = new HashSet<string>();
             //Console.WriteLine(strBase.Length);
             //int oldHashLength = hashset.Count();
             //foreach (var str in strBase)
             //{
-            //    hashset.Add(str);  
+            //    hashset.Add(str);
             //}
 
             //int newHashLength = hashset.Count();
@@ -99,7 +96,7 @@ namespace BusinessLayer
 
             //}
 
-            
+
             return sent;
         }
 
