@@ -14,11 +14,30 @@ namespace UILayer
     using BusinessLayer;
     class UILayer
     {
-
         public static void Main(string[] args)
         {
             string t = null;
             t = Intro();
+            while (true)
+            {
+                ProvideAssistance(t);
+                t=Bot.Prompt("Do you want to look for more Monitors and solutions? If Yes, Please specify whether you want to look for monitor or solution");
+                if (t.Contains("no"))
+                {
+                    EndConversation();
+                    return;
+                }
+            }
+        }
+
+        private static void EndConversation()
+        {
+            Bot.Prompt("Thank you for contacting us. I hope we have helped you in a proper way. Have a great day.");
+            Bot.PrintLine(":)");
+        }
+
+        private static void ProvideAssistance(string t)
+        {
             bool loop = true;
             while (loop)
             {
@@ -34,10 +53,10 @@ namespace UILayer
                 }
                 else
                 {
-                    t=Bot.Prompt("We only provide information on Patient Monitors Devices or Solutions. Please specify");
+                    t = Bot.Prompt(
+                        "We only provide information on Patient Monitors Devices or Solutions. Please specify");
                 }
             }
-            return;
         }
 
         private static string Intro()
