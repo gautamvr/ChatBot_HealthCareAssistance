@@ -1,0 +1,13 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\BusinessLayerTest.dll.config
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\BusinessLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\BusinessLayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\BusinessLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\nunit.framework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\BusinessLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\nunit.framework.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Release\nunit.framework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Release\BusinessLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Release\BusinessLayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Release\BusinessLayerTest.csprojResolveAssemblyReference.cache

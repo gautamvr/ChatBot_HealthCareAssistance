@@ -1,2 +1,16 @@
 HelloWorld.sln.DotSettings.user
 .dblock
+CHATBOT.sln.DotSettings.user
+
+BusinessLayer/bin/Debug/
+BusinessLayer/obj/Debug/
+BusinessLayerTest/bin/Debug/
+BusinessLayerTest/obj/Debug/
+CHATBOT/bin/Debug
+CHATBOT/obj/Debug
+UILayerTest/bin/Debug/
+UILayerTest/obj/Debug/
+DataLayer/bin/Debug/
+DataLayer/obj/Debug/
+DataLayerTest/bin/Debug/
+DataLayerTest/obj/Debug/

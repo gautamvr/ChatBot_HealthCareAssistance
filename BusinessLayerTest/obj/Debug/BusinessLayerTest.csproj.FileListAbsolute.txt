@@ -12,3 +12,4 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\Bu
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\BusinessLayerTest.dll.config

@@ -16,3 +16,4 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\Google
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\MySql.Data.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayerTest.dll.config

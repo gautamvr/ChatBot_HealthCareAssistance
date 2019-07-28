@@ -1,0 +1,7 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Release\UILayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Release\UILayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Release\nunit.framework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Release\nunit.framework.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Release\nunit.framework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Release\UILayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Release\UILayerTest.pdb

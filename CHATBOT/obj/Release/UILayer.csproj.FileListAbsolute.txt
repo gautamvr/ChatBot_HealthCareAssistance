@@ -1,0 +1,12 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\CHATBOT.exe.config
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\CHATBOT.exe
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\CHATBOT.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\BusinessLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\MySql.Data.EntityFramework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\BusinessLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\MySql.Data.EntityFramework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\CHATBOT.exe
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\CHATBOT.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\UILayer.csprojResolveAssemblyReference.cache

@@ -12,48 +12,46 @@ namespace DataLayer
 {
     public class AccessDataBase
     {
-        
-        
-        public static string SetupSqlConnection(string query,int t)
+        private static string _connectionString = string.Empty;
+        public string ConnectionString
         {
-            string str="";
-            string provider = ConfigurationManager.AppSettings["provider"];
-            string connectionString = ConfigurationManager.AppSettings["connectionString"];
-            DbProviderFactory factory = DbProviderFactories.GetFactory(provider);
-            using (DbConnection connection = factory.CreateConnection())
+            get
             {
-                if (connection == null)
+                if (_connectionString == string.Empty)
                 {
-                    throw new Exception("Connection Error");
+                    _connectionString = ConfigurationManager.AppSettings["connectionString"];
                 }
-
-                connection.ConnectionString = connectionString;
-                connection.Open();
-                DbCommand command = factory.CreateCommand();
-                if (command == null)
-                {
-                    throw new Exception("Command Error");
-                }
-
-
-                command.Connection = connection;
-                command.CommandText = query;
-                DbDataReader dataReader = command.ExecuteReader(CommandBehavior.CloseConnection);
-                while (dataReader.Read())
-                {
-                    for (int i = 0; i <= t; i++)
-                    {
-                        str = str + dataReader.GetString(i)+"\n";
-                    }
-                }
-
-                return str;
+                return _connectionString;
             }
-
-
         }
 
-        
+        public SqlCommand GetCommand(string sql)
+        {
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            if (conn == null)
+            {
+                throw new Exception("Connection Error");
+            }
+            SqlCommand sqlCmd = new SqlCommand(sql, conn);
+            if (sqlCmd == null)
+            {
+                throw new Exception("Command Error");
+            }
+            return sqlCmd;
+        }
+
+        public string Execute(string sql)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = GetCommand(sql);
+            cmd.Connection.Open();
+            
+            dt.Load(cmd.ExecuteReader());
+            cmd.Connection.Close();
+            string res = string.Join("\n",
+                dt.Rows.OfType<DataRow>().Select(x => string.Join(" \n   ", x.ItemArray)));
+            return res;
+        }
     }
 }
 

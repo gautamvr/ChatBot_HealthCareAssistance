@@ -1,0 +1,7 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Data.EntityFramework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Data.EntityFramework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache

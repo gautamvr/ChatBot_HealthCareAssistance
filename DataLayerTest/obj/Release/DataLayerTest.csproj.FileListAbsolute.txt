@@ -1,0 +1,12 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\DataLayerTest.dll.config
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\DataLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\DataLayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\MySql.Data.EntityFramework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\nunit.framework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\MySql.Data.EntityFramework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\nunit.framework.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Release\nunit.framework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\obj\Release\DataLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\obj\Release\DataLayerTest.pdb

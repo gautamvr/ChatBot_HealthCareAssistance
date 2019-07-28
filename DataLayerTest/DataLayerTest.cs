@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.Configuration;
+using System.Data.SqlClient;
+using NUnit.Framework.Constraints;
+
 namespace DataLayerTest
 {
     using DataLayer;
@@ -12,13 +15,33 @@ namespace DataLayerTest
     public class DataLayerTest
     {
         [Test]
-        public void TestSQLDataExtractor()
+        public void TestSqlDataExtractor()
         {
-            string TestData1 = "MX400     \n";
-
-            string TestSQLquery = "Select ModelNo from Monitors where ModelNo ='MX400'";
-            Assert.AreEqual(AccessDataBase.SetupSqlConnection(TestSQLquery,0),TestData1);
+            AccessDataBase da=new AccessDataBase();
+            string TestData1 = "MX400     ";
+            string TestSQLquery = "Select ModelNo from Monitors where Id='1'";
+            Assert.AreEqual(TestData1, da.Execute(TestSQLquery));
         }
+
+        [Test]
+        public void TestSqlConnection()
+        {
+             AccessDataBase da=new AccessDataBase();
+             string expectedStr = ConfigurationManager.AppSettings["connectionString"];
+             string actualStr = da.ConnectionString;
+             Assert.AreEqual(expectedStr,actualStr);
+        }
+
+        [Test]
+        public void TestSqlCommand()
+        {
+            string spoName = "Select * from Monitors";
+            AccessDataBase da = new AccessDataBase();
+            SqlCommand response = da.GetCommand(spoName);
+            Assert.IsNotNull(response);
+            Assert.AreEqual(spoName, response.CommandText);
+        }
+
 
     }
 }

@@ -98,36 +98,38 @@ namespace BusinessLayer
     }
     public class MonitorLogic
     {
+        static AccessDataBase da=new AccessDataBase();
         //------------------Queries to Access the Monitor Table------------------------
         public static string GetSerialName()
         {
-            return AccessDataBase.SetupSqlConnection("Select Distinct Category from Monitors", 0);
+            return da.Execute("Select Distinct Category from Monitors");
         }
 
         public static string GetDistinctModelNames()
         {
-            string allModelNames = AccessDataBase.SetupSqlConnection("Select Distinct ModelNo from Monitors", 0);
-            return allModelNames;
+            return da.Execute("Select Distinct ModelNo from Monitors");
+
         }
 
         public static string GetDistinctSpecs()
         {
-            string totalSpecs = AccessDataBase.SetupSqlConnection("Select Distinct Spec1 from Monitors", 0) +"\n"+
-                         AccessDataBase.SetupSqlConnection("Select Distinct Spec2 from Monitors", 0) +"\n"+
-                         AccessDataBase.SetupSqlConnection("Select Distinct Spec3 from Monitors", 0);
+            string totalSpecs = da.Execute("Select Distinct Spec1 from Monitors") +
+                                da.Execute("Select Distinct Spec2 from Monitors") +
+                                da.Execute("Select Distinct Spec3 from Monitors");
+                
             return totalSpecs;
 
         }
 
         public static string GetModels(string s)
         {
-            return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Category='" + s + "'", 0);
+            return da.Execute("Select ModelNo from Monitors where Category='" + s + "'");
         }
 
         public static string GetSpecification(string m)
         {
-            return AccessDataBase.SetupSqlConnection(
-                "Select ModelNo,Spec1,Spec2,Spec3,url from Monitors where ModelNo='" + m + "'", 4);
+            return da.Execute("Select ModelNo,Spec1,Spec2,Spec3,url from Monitors where ModelNo='" + m + "'");
+            
         }
 
         public static string GetModelOnSpecifications(string UserQuery)
@@ -136,92 +138,92 @@ namespace BusinessLayer
             if (UserQuery.Contains("non-portable"))
             {
                 if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='4.5'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='4.5'' Touch Screen'");
+                        
                 if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
                 if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='9'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='9'' Touch Screen'");
                 if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='12'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='12'' Touch Screen'");
                 if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='15'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='15'' Touch Screen'");
             }
 
-            else if (UserQuery.Contains("portable") && !(UserQuery.Contains("touch screen")))
+            else if (UserQuery.Contains("portable") && (UserQuery.Contains("touch screen")))
             {
                 if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='4.5'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='4.5'' Touch Screen'");
                 if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
                 if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='9'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='9'' Touch Screen'");
                 if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='12'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='12'' Touch Screen'");
                 if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
-                    return AccessDataBase.SetupSqlConnection(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='15'' Touch Screen'", 0);
+                    return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='15'' Touch Screen'");
             }
 
             //portability only
             if (UserQuery.Contains("non-portable") && !(UserQuery.Contains("touch screen")))
-                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Non-Portable'", 0);
+                return da.Execute("Select ModelNo from Monitors where Spec1='Non-Portable'");
             else if (UserQuery.Contains("portable") && !(UserQuery.Contains("touch screen")))
-                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='Portable'", 0);
+                return da.Execute("Select ModelNo from Monitors where Spec1='Portable'");
 
 
             //touch screen only
             if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
                 !(UserQuery.Contains("non-portable")))
-                return AccessDataBase.SetupSqlConnection(
-                    "Select ModelNo from Monitors where Spec2='4.5'' Touch Screen'", 0);
+                return da.Execute(
+                    "Select ModelNo from Monitors where Spec2='4.5'' Touch Screen'");
             if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
                 !(UserQuery.Contains("non-portable")))
-                return AccessDataBase.SetupSqlConnection(
-                    "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'", 0);
+                return da.Execute(
+                    "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
             if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
                 !(UserQuery.Contains("non-portable")))
-                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='9'' Touch Screen'",
-                    0);
+                return da.Execute("Select ModelNo from Monitors where Spec2='9'' Touch Screen'");
             if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
                 !(UserQuery.Contains("non-portable")))
-                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='12'' Touch Screen'",
-                    0);
+                return da.Execute("Select ModelNo from Monitors where Spec2='12'' Touch Screen'");
             if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
                 !(UserQuery.Contains("non-portable")))
-                return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec2='15'' Touch Screen'",
-                    0);
+                return da.Execute("Select ModelNo from Monitors where Spec2='15'' Touch Screen'");
 
-            return AccessDataBase.SetupSqlConnection("Select ModelNo from Monitors where Spec1='"+UserQuery+"' or Spec2='"+UserQuery+"' or Spec3='"+UserQuery+"'",0);
+            return da.Execute("Select ModelNo from Monitors where Spec1='"+UserQuery+"' or Spec2='"+UserQuery+"' or Spec3='"+UserQuery+"'");
         }
     }
 
     public class SolutionLogic
     {
+        static AccessDataBase da=new AccessDataBase();
         // -----------Queries to access the solutions table-----------------------------------------
         public static string GetSolutionName()
         {
-            return AccessDataBase.SetupSqlConnection("Select Distinct Category from Solutions", 0);
+            
+            return da.Execute("Select Distinct Category from Solutions");
         }
 
         public static string GetSolution(string s)
         {
 
-            return AccessDataBase.SetupSqlConnection("Select Name from Solutions where Category ='" + s + "'", 0);
+            return da.Execute("Select Name from Solutions where Category ='" + s + "'");
         }
 
         public static string GetDescription(string s)
         {
-            return AccessDataBase.SetupSqlConnection(
-                "Select Description,Spec1,Spec3,url from Solutions where Name ='" + s + "'", 3);
+            return da.Execute(
+                "Select Description,Spec1,Spec3,url from Solutions where Name ='" + s + "'");
         }
 
         public static string GetPurpose(string UserQuery)
@@ -229,23 +231,23 @@ namespace BusinessLayer
             //Find out the soln that matches user purpose
             if (UserQuery.Contains("decision") || (UserQuery.Contains("support")) || (UserQuery.Contains("help")))
             {
-                return AccessDataBase.SetupSqlConnection(
-                    "Select Name,Description,url from Solutions where Category = 'Clinical Decision Support' ", 3);
+                return da.Execute(
+                    "Select Name,Description,url from Solutions where Category = 'Clinical Decision Support' ");
 
             }
 
             else if (UserQuery.Contains((" surveillance")) || (UserQuery.Contains("surveillancing")) ||
                      UserQuery.Contains("alarming") || UserQuery.Contains("alarm"))
             {
-                return AccessDataBase.SetupSqlConnection(
-                    "Select Name,Description,url from Solutions where Category = 'CSA' ", 2);
+                return da.Execute(
+                    "Select Name,Description,url from Solutions where Category = 'CSA' ");
             }
 
             else if (UserQuery.Contains((" emergency")) || (UserQuery.Contains("warning")) ||
                      UserQuery.Contains("score") || UserQuery.Contains("early"))
             {
-                return AccessDataBase.SetupSqlConnection(
-                    "Select Name,Description,url from Solutions where Category = 'EWES' ", 2);
+                return da.Execute(
+                    "Select Name,Description,url from Solutions where Category = 'EWES' ");
             }
 
             else
