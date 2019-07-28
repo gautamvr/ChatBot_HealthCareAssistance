@@ -1,0 +1,14 @@
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\BusinessLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\BusinessLayerTest.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\BusinessLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\DataLayer.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\nunit.framework.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\BusinessLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\nunit.framework.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\bin\Debug\nunit.framework.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.csprojAssemblyReference.cache
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.csproj.CoreCompileInputs.cache
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.csproj.CopyComplete
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayerTest\obj\Debug\BusinessLayerTest.pdb
