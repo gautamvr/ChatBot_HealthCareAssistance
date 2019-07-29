@@ -40,6 +40,13 @@ namespace BusinessLayerTest
         }
 
         [Test]
+        public void TestGetCategories()
+        {
+            string output = "bedside monitor               \nhigh end monitors             \nmaternity and fetal monitor   \nvital signs monitor           ";
+            Assert.AreEqual(output,MonitorLogic.GetSerialName());
+        }
+
+        [Test]
         public void TestGetModelsFromCategory()
         {
             string category1 = "bedside monitor";
@@ -82,6 +89,13 @@ namespace BusinessLayerTest
             Assert.AreEqual(solutions2, SolutionLogic.GetSolution(category2));
             Assert.AreEqual(solutions3, SolutionLogic.GetSolution(category3));
 
+        }
+
+        [Test]
+        public void TestGetCategoriesForSolutions()
+        {
+            string output = "Clinical Decision Support                                                                           \nCSA                                                                                                 \nEWES                                                                                                ";
+            Assert.AreEqual(output,SolutionLogic.GetSolutionName());
         }
         
     }
