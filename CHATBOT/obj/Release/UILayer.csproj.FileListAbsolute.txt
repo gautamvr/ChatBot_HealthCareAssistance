@@ -9,4 +9,10 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\DataLayer.
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\MySql.Data.EntityFramework.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\CHATBOT.exe
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\CHATBOT.pdb
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\UILayer.csprojResolveAssemblyReference.cache
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\MySql.Data.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\Google.Protobuf.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\bin\Release\MySql.Data.xml
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\UILayer.csprojAssemblyReference.cache
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\UILayer.csproj.CoreCompileInputs.cache
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Release\UILayer.csproj.CopyComplete

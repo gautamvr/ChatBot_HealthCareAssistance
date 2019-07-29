@@ -6,7 +6,7 @@ using System.IO;
 using System.Data.Common;
 using System.Configuration;
 using BusinessLayer;
-
+using System.Threading;
 
 namespace UILayer
 {
@@ -35,6 +35,7 @@ namespace UILayer
         {
             Bot.Prompt("Thank you for contacting us. I hope we have helped you in a proper way. Have a great day.");
             Bot.PrintLine(":)");
+            Thread.Sleep(3000);
         }
 
         private static void ProvideAssistance(string t)
@@ -62,7 +63,7 @@ namespace UILayer
 
         private static string Intro()
         {
-            Bot.Prompt("Hi, you are talking with a ChatBot");
+            Bot.Prompt("Hi, you are talking with a ChatBot. I'm here to help you in selecting the desired product of your need");
             string t = Bot.Prompt("Do you want information about purchasing Patient Monitor or Solutions?");
             return t;
         }
