@@ -12,13 +12,17 @@ namespace UILayer
 {
     
     using BusinessLayer;
-    using DataLayer;
+    
     class UILayer
     {
         public static void Main(string[] args)
         {
             string t = null;
-            t = Intro();
+            Bot.PrintLine("Please provide your details to have a hassle free enquiry.");
+            string userName = GetUserName();
+            string userPhone = GetUserPhoneNum();
+            string userEmail = GetUserEmail();
+            t = Intro(userName);
             while (true)
             {
                 ProvideAssistance(t);
@@ -29,6 +33,25 @@ namespace UILayer
                     return;
                 }
             }
+        }
+
+        public static string GetUserName()
+        {
+            string name = Bot.Prompt("Please provide your name");
+            return name;
+        }
+
+        public static string GetUserPhoneNum()
+        {
+            string phoneNum = Bot.Prompt("Please provide your Phone Number");
+            return phoneNum;
+
+        }
+
+        public static string GetUserEmail()
+        {
+            string emailId = Bot.Prompt("Please provide your Email ID");
+            return emailId;
         }
 
         private static void EndConversation()
@@ -61,9 +84,9 @@ namespace UILayer
             }
         }
 
-        private static string Intro()
+        private static string Intro(string user)
         {
-            Bot.Prompt("Hi, you are talking with a ChatBot. I'm here to help you in selecting the desired product of your need");
+            Bot.Prompt("Hi {0}, you are talking with a ChatBot. I'm here to help you in selecting the desired product of your need",user);
             string t = Bot.Prompt("Do you want information about purchasing Patient Monitor or Solutions?");
             return t;
         }
@@ -102,7 +125,7 @@ namespace UILayer
         private static void GetMonitorsBasedOnSpecs()
         {
             string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
-            string allDistinctSpecs = MonitorLogic.GetDistinctSpecs();
+            string allDistinctSpecs = MonitorAccessor.GetDistinctSpecs();
             allDistinctSpecs = allDistinctSpecs.ToLower();
             string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
             while (!(allDistinctSpecs.Contains(UserQuery)))
@@ -117,7 +140,7 @@ namespace UILayer
                 UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
             }
             Bot.PrintLine("Model Numbers with {0} as a specification are: ",UserQuery);
-            string modelsOnSpecs = MonitorLogic.GetModelOnSpecifications(UserQuery);
+            string modelsOnSpecs = MonitorAccessor.GetModelOnSpecifications(UserQuery);
             Bot.PrintData(modelsOnSpecs);
             string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
             string modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
@@ -130,7 +153,7 @@ namespace UILayer
                         UserQuery);
                     modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
                 }
-                Bot.PrintData(MonitorLogic.GetSpecification(modelName));
+                Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
                 modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
                 {
@@ -148,7 +171,7 @@ namespace UILayer
         private static void GetMonitorsBasedOnCategory()
         {
             Bot.PrintLine("Categories are mentioned below:");
-            string allCategories = MonitorLogic.GetSerialName();
+            string allCategories = MonitorAccessor.GetSerialName();
             Bot.PrintData(allCategories);
             string categorySentence = Bot.Prompt("Select the Category you want to purchase?");
             string category = Logic.ExtractKeyword(allCategories, categorySentence);
@@ -158,7 +181,7 @@ namespace UILayer
                 category = Logic.ExtractKeyword(allCategories, categorySentence);
             }
             Bot.PrintLine("Model Numbers of the category '{0}' are mentioned below:", category);
-            string modelOnCategory = MonitorLogic.GetModels(category);
+            string modelOnCategory = MonitorAccessor.GetModels(category);
             Bot.PrintData(modelOnCategory);
             string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
             string modelName = Logic.ExtractKeyword(modelOnCategory, modelNameSentence).ToUpper();
@@ -170,7 +193,7 @@ namespace UILayer
                     modelName = Logic.ExtractKeyword(modelOnCategory, modelNameSentence).ToUpper();
 
                 }
-                Bot.PrintData(MonitorLogic.GetSpecification(modelName));
+                Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
                 modelNameSentence=Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
                 {
@@ -216,12 +239,12 @@ namespace UILayer
             string userQuery = Bot.Prompt("What is the purpose of the solution you need?");
             while (true)
             {
-                string solution = SolutionLogic.GetPurpose(userQuery);
+                string solution = SolutionsAccessor.GetPurpose(userQuery);
                 while (String.Equals(solution, "null"))
                 {
                     userQuery = Bot.Prompt(
                         "I'm Sorry. I'm not able to understand what you are looking for. Can you please be more specific? ");
-                    solution = SolutionLogic.GetPurpose(userQuery);
+                    solution = SolutionsAccessor.GetPurpose(userQuery);
 
                 }
                 Bot.PrintLine("These are possible Solutions we offer that could match your requirement : ");
@@ -237,7 +260,7 @@ namespace UILayer
         private static void SolutionsAll()
         {
             Bot.PrintLine("The various types of solution are given below:");
-            string allCategory= SolutionLogic.GetSolutionName();
+            string allCategory= SolutionsAccessor.GetSolutionName();
             Bot.PrintData(allCategory);
             allCategory = allCategory.ToLower();
             string typeSentence = Bot.Prompt("Select the type of solution you want to purchase?");
@@ -268,7 +291,7 @@ namespace UILayer
         private static void ShowSolution(string type)
         {
             Bot.PrintLine("Available solutions of the type '{0}' are mentioned below:", type);
-            string allSolutions = SolutionLogic.GetSolution(type);
+            string allSolutions = SolutionsAccessor.GetSolution(type);
             Bot.PrintData(allSolutions);
             allSolutions = allSolutions.ToLower();
             string solnNameSentence = Bot.Prompt("Which solution of above are you interested to know more about?");
@@ -282,7 +305,7 @@ namespace UILayer
                     solnName = Logic.ExtractKeyword(allSolutions, solnNameSentence);
                 }
                 Bot.PrintLine("The solution description is :");
-                Bot.PrintData(SolutionLogic.GetDescription(solnName));
+                Bot.PrintData(SolutionsAccessor.GetDescription(solnName));
                 solnNameSentence = Bot.Prompt("Do you want to look for more solutions of the type '{0}' ? Mention the solution you want to choose.", type);
                 if (solnNameSentence.Contains("what") || solnNameSentence.Contains("show"))
                 {

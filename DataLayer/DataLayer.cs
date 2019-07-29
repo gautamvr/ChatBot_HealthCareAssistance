@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class AccessDataBase
+    public class DAL
     {
         private static string _connectionString = string.Empty;
         public string ConnectionString

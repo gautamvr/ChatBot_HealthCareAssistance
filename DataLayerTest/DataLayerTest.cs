@@ -17,7 +17,7 @@ namespace DataLayerTest
         [Test]
         public void TestSqlDataExtractor()
         {
-            AccessDataBase da=new AccessDataBase();
+            DAL da=new DAL();
             string TestData1 = "MX400     ";
             string TestSQLquery = "Select ModelNo from Monitors where Id='1'";
             Assert.AreEqual(TestData1, da.Execute(TestSQLquery));
@@ -26,7 +26,7 @@ namespace DataLayerTest
         [Test]
         public void TestSqlConnection()
         {
-             AccessDataBase da=new AccessDataBase();
+             DAL da=new DAL();
              string expectedStr = ConfigurationManager.AppSettings["connectionString"];
              string actualStr = da.ConnectionString;
              Assert.AreEqual(expectedStr,actualStr);
@@ -36,7 +36,7 @@ namespace DataLayerTest
         public void TestSqlCommand()
         {
             string spoName = "Select * from Monitors";
-            AccessDataBase da = new AccessDataBase();
+            DAL da = new DAL();
             SqlCommand response = da.GetCommand(spoName);
             Assert.IsNotNull(response);
             Assert.AreEqual(spoName, response.CommandText);

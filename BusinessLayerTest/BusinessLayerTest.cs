@@ -43,7 +43,7 @@ namespace BusinessLayerTest
         public void TestGetCategories()
         {
             string output = "bedside monitor               \nhigh end monitors             \nmaternity and fetal monitor   \nvital signs monitor           ";
-            Assert.AreEqual(output,MonitorLogic.GetSerialName());
+            Assert.AreEqual(output,MonitorAccessor.GetSerialName());
         }
 
         [Test]
@@ -57,10 +57,10 @@ namespace BusinessLayerTest
             string models2 = "CM SERIES \nCMS200    ";
             string models3 = "VM1       \nVM4       \nVM6       \nVM8       \nVSI       \nVS2+      ";
             string models4 = "CL        \nFM20      \nFM30      \nFM40      \nFM50      ";
-            Assert.AreEqual(models1, MonitorLogic.GetModels(category1));
-            Assert.AreEqual(models2,MonitorLogic.GetModels(category2));
-            Assert.AreEqual(models3,MonitorLogic.GetModels(category3));
-            Assert.AreEqual(models4,MonitorLogic.GetModels(category4));
+            Assert.AreEqual(models1, MonitorAccessor.GetModels(category1));
+            Assert.AreEqual(models2,MonitorAccessor.GetModels(category2));
+            Assert.AreEqual(models3,MonitorAccessor.GetModels(category3));
+            Assert.AreEqual(models4,MonitorAccessor.GetModels(category4));
         }
 
         [Test]
@@ -72,9 +72,9 @@ namespace BusinessLayerTest
             string query1 = "I want a monitor with 9' touch screen";
             string query2 = "I want a non-portable monitor";
             string query3 = "I want a portable 9' touch screen monitor";
-            Assert.AreEqual(models1,MonitorLogic.GetModelOnSpecifications(query1));
-            Assert.AreEqual(models2,MonitorLogic.GetModelOnSpecifications(query2));
-            Assert.AreEqual(models3,MonitorLogic.GetModelOnSpecifications(query3));
+            Assert.AreEqual(models1,MonitorAccessor.GetModelOnSpecifications(query1));
+            Assert.AreEqual(models2,MonitorAccessor.GetModelOnSpecifications(query2));
+            Assert.AreEqual(models3,MonitorAccessor.GetModelOnSpecifications(query3));
         }
         [Test]
         public void TestGetSolutions()
@@ -85,9 +85,9 @@ namespace BusinessLayerTest
             string category1 = "CSA";
             string category2 = "EWES";
             string category3 = "Clinical Decision Support";
-            Assert.AreEqual(solutions1,SolutionLogic.GetSolution(category1));
-            Assert.AreEqual(solutions2, SolutionLogic.GetSolution(category2));
-            Assert.AreEqual(solutions3, SolutionLogic.GetSolution(category3));
+            Assert.AreEqual(solutions1,SolutionsAccessor.GetSolution(category1));
+            Assert.AreEqual(solutions2, SolutionsAccessor.GetSolution(category2));
+            Assert.AreEqual(solutions3, SolutionsAccessor.GetSolution(category3));
 
         }
 
@@ -95,7 +95,7 @@ namespace BusinessLayerTest
         public void TestGetCategoriesForSolutions()
         {
             string output = "Clinical Decision Support                                                                           \nCSA                                                                                                 \nEWES                                                                                                ";
-            Assert.AreEqual(output,SolutionLogic.GetSolutionName());
+            Assert.AreEqual(output,SolutionsAccessor.GetSolutionName());
         }
         
     }

@@ -4,6 +4,4 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\bin\Release\Data
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\bin\Release\DataLayer.pdb
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.pdb
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.csprojAssemblyReference.cache
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.csproj.CopyComplete
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Release\BusinessLayer.csprojResolveAssemblyReference.cache

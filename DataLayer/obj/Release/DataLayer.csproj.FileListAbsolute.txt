@@ -4,10 +4,4 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Da
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Data.EntityFramework.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.pdb
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Data.dll
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\Google.Protobuf.dll
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\BouncyCastle.Crypto.dll
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Release\MySql.Data.xml
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.csprojAssemblyReference.cache
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.csproj.CoreCompileInputs.cache
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.csproj.CopyComplete
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache
