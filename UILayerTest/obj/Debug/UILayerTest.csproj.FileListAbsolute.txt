@@ -3,7 +3,6 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Debug\UILayerT
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.pdb
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.xml
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csprojAssemblyReference.cache
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CoreCompileInputs.cache
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.dll

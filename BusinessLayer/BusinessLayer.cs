@@ -11,6 +11,15 @@ namespace BusinessLayer
     
     public class Logic
     {
+        public static string RetunList(List<string> list)
+        {
+            string str = null;
+            foreach (string listItem in list)
+            {
+                str = str + listItem + "\n";
+            }
+            return str;
+        }
         public static HashSet<string> ParseToHashSet(string data)
         {
             HashSet<string> hashBase = new HashSet<string>();

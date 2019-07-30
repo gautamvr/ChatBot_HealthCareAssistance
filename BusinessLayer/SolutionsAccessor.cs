@@ -34,23 +34,19 @@ namespace BusinessLayer
             //Find out the soln that matches user purpose
             if (UserQuery.Contains("decision") || (UserQuery.Contains("support")) || (UserQuery.Contains("help")))
             {
-                return da.Execute(
-                    "Select Name,Description,url from Solutions where Category = 'Clinical Decision Support' ");
-
+                return GetSolution("Clinical Decision Support");
             }
 
             else if (UserQuery.Contains((" surveillance")) || (UserQuery.Contains("surveillancing")) ||
                      UserQuery.Contains("alarming") || UserQuery.Contains("alarm"))
             {
-                return da.Execute(
-                    "Select Name,Description,url from Solutions where Category = 'CSA' ");
+                return GetSolution("CSA");
             }
 
             else if (UserQuery.Contains((" emergency")) || (UserQuery.Contains("warning")) ||
                      UserQuery.Contains("score") || UserQuery.Contains("early"))
             {
-                return da.Execute(
-                    "Select Name,Description,url from Solutions where Category = 'EWES' ");
+                return GetSolution("EWES");
             }
 
             else

@@ -31,7 +31,6 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Debug\Google.Pro
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Debug\MySql.Data.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\bin\Debug\MySql.Data.EntityFramework.xml
-C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.dll

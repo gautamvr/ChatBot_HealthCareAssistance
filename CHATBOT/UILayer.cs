@@ -5,23 +5,21 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Data.Common;
 using System.Configuration;
+using System.Linq;
 using BusinessLayer;
 using System.Threading;
 
 namespace UILayer
 {
-    
     using BusinessLayer;
-    
+
     class UILayer
     {
         public static void Main(string[] args)
         {
             string t = null;
-            Bot.PrintLine("Please provide your details to have a hassle free enquiry.");
-            string userName = GetUserName();
-            string userPhone = GetUserPhoneNum();
-            string userEmail = GetUserEmail();
+            var userName = RegisterUser(out var userPhone,out var userEmail);
+            Console.WriteLine("-------------------------------------------------------------------\n");
             t = Intro(userName);
             while (true)
             {
@@ -29,40 +27,77 @@ namespace UILayer
                 t=Bot.Prompt("Do you want to look for more Monitors and solutions? If Yes, Please specify whether you want to look for monitor or solution");
                 if (t.Contains("no"))
                 {
+                    Bot.PrintLine("Thank you for contacting us. Your order details will be shared with our executive.");
+                    Console.WriteLine("Your order details will be contacted to you through your phone number: {0} and you Email: {1}",userPhone,userEmail);
                     EndConversation();
+                    Console.WriteLine("-------------------------------------------------------------------");
                     return;
                 }
             }
         }
 
+        private static string RegisterUser(out string userPhone,out string userEmail)
+        {
+            Console.WriteLine("Please provide your details to have a hassle free enquiry.\n");
+            string userName = GetUserName();
+            userPhone = GetUserPhoneNum();
+            userEmail = GetUserEmail();
+            Console.WriteLine("\n\n\nThank you. Your session with ChatBot will begin now\n");
+            return userName;
+        }
+
         public static string GetUserName()
         {
-            string name = Bot.Prompt("Please provide your name");
+            Console.WriteLine("Please provide your name: ");
+            string name = Console.ReadLine();
             return name;
         }
 
         public static string GetUserPhoneNum()
         {
-            string phoneNum = Bot.Prompt("Please provide your Phone Number");
+            Console.WriteLine("\nPlease provide your Phone number: ");
+            string phoneNum = Console.ReadLine();
             return phoneNum;
 
         }
 
         public static string GetUserEmail()
         {
-            string emailId = Bot.Prompt("Please provide your Email ID");
+            Console.WriteLine("\nPlease provide your Email Id: ");
+            string emailId = Console.ReadLine();
             return emailId;
         }
 
         private static void EndConversation()
         {
-            Bot.Prompt("Thank you for contacting us. I hope we have helped you in a proper way. Have a great day.");
-            Bot.PrintLine(":)");
+
+            if (Cart.Monitors.Count == 0)
+            {
+                Bot.PrintLine("You haven't added any Patient Monitors to your cart yet");
+            }
+            else
+            {
+                Bot.PrintLine("These are the Monitor item(s) in your cart :");
+                Bot.PrintData(Logic.RetunList(Cart.Monitors));
+            }
+
+            if (Cart.Solutions.Count == 0)
+            {
+                Bot.PrintLine("You haven't added any Solutions to your cart yet");
+            }
+            else
+            {
+                Bot.PrintLine("These are the Solution item(s) in your cart :");
+                Bot.PrintData(Logic.RetunList(Cart.Solutions));
+            }
+
+            Bot.Prompt("I hope we have helped you in a proper way. Have a great day.");
             Thread.Sleep(3000);
         }
 
         private static void ProvideAssistance(string t)
         {
+            
             bool loop = true;
             while (loop)
             {
@@ -76,12 +111,17 @@ namespace UILayer
                     AccessSolutions();
                     loop = false;
                 }
+                else if (t.Contains("no") || (t.Contains("dont")))
+                {
+                    return;
+                }
                 else
                 {
                     t = Bot.Prompt(
                         "We only provide information on Patient Monitors Devices or Solutions. Please specify");
                 }
             }
+
         }
 
         private static string Intro(string user)
@@ -97,10 +137,6 @@ namespace UILayer
             {
                 string again = "";
                 string userChoice = Bot.Prompt("Do you want monitor based on categories or specifications?");
-                //if (userChoice.Contains("back") || userChoice.Contains("previous"))
-                //{
-                //    return;
-                //}
                 while ((!userChoice.Contains("category") && !userChoice.Contains("categories")) &&
                        !userChoice.Contains("spec"))
                 {
@@ -114,6 +150,8 @@ namespace UILayer
                 {
                     GetMonitorsBasedOnSpecs();
                 }
+                Bot.PrintLine("These are the item(s) in your cart :");
+                Bot.PrintData(Logic.RetunList(Cart.Monitors));
                 again = Bot.Prompt("Do you want to look for more products?");
                 if (again.Contains("no"))
                 {
@@ -124,8 +162,10 @@ namespace UILayer
 
         private static void GetMonitorsBasedOnSpecs()
         {
-            string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
+            Bot.PrintLine("These are the specifications which are available : ");
             string allDistinctSpecs = MonitorAccessor.GetDistinctSpecs();
+            Bot.PrintData(allDistinctSpecs);
+            string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
             allDistinctSpecs = allDistinctSpecs.ToLower();
             string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
             while (!(allDistinctSpecs.Contains(UserQuery)))
@@ -154,6 +194,12 @@ namespace UILayer
                     modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
                 }
                 Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
+                string buyMonitor = Bot.Prompt("Do you want to select this product?");
+                if (buyMonitor.Contains("yes"))
+                {
+                    Cart.Monitors.Add(modelName);
+                    Bot.PrintLine("The product is successfully added to your cart.");
+                }
                 modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
                 {
@@ -194,7 +240,13 @@ namespace UILayer
 
                 }
                 Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
-                modelNameSentence=Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
+                string buyMonitor = Bot.Prompt("Do you want to select this product?");
+                if (buyMonitor.Contains("yes"))
+                {
+                    Cart.Monitors.Add(modelName);
+                    Bot.PrintLine("The product is successfully added to your cart.");
+                }
+                modelNameSentence =Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
                 if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
                 {
                     Bot.PrintData(modelOnCategory);
@@ -247,8 +299,7 @@ namespace UILayer
                     solution = SolutionsAccessor.GetPurpose(userQuery);
 
                 }
-                Bot.PrintLine("These are possible Solutions we offer that could match your requirement : ");
-                Bot.PrintData(solution);
+                ShowSolution(solution);
                 userQuery=Bot.Prompt("Do you want to look for more Solutions based on different purpose of your choice? If Yes, Mention your purpose");
                 if (userQuery.Contains("no"))
                 {
@@ -306,6 +357,12 @@ namespace UILayer
                 }
                 Bot.PrintLine("The solution description is :");
                 Bot.PrintData(SolutionsAccessor.GetDescription(solnName));
+                string addcartSolution = Bot.Prompt("Do you want to Select this solution");
+                if (addcartSolution.Contains("yes"))
+                {
+                    Cart.Solutions.Add(type);
+                    Bot.PrintLine("The solution {0} is now added to your cart", type);
+                }
                 solnNameSentence = Bot.Prompt("Do you want to look for more solutions of the type '{0}' ? Mention the solution you want to choose.", type);
                 if (solnNameSentence.Contains("what") || solnNameSentence.Contains("show"))
                 {
