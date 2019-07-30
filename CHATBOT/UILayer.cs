@@ -28,7 +28,7 @@ namespace UILayer
                 if (t.Contains("no"))
                 {
                     Bot.PrintLine("Thank you for contacting us. Your order details will be shared with our executive.");
-                    Console.WriteLine("Your order details will be contacted to you through your phone number: {0} and you Email: {1}",userPhone,userEmail);
+                    Console.WriteLine("Your order details will be contacted to you through your phone number: {0} and you Email: {1}\n",userPhone,userEmail);
                     EndConversation();
                     Console.WriteLine("-------------------------------------------------------------------");
                     return;
@@ -269,11 +269,14 @@ namespace UILayer
                     (UserChoice.Contains("see")))
                 {
                     SolutionsAll();
+                    return;
+
                 }
                 else if (UserChoice.Contains("specific") || (UserChoice.Contains("purpose")) ||
                          (UserChoice.Contains("looking")) || (UserChoice.Contains("want")))
                 {
                     SolutionsBasedOnPurpose();
+                    return;
                 }
                 else
                 {
@@ -283,6 +286,7 @@ namespace UILayer
                         return;
                     }
                 }
+
             }
         }
 
@@ -326,16 +330,17 @@ namespace UILayer
                 }
                 ShowSolution(type);
                 typeSentence=Bot.Prompt("Do you want to explore other solution types? If Yes, enter the type of the solution.");
+                if (typeSentence.Contains("no"))
+                {
+                    return;
+                }
                 if (typeSentence.Contains("what") || typeSentence.Contains("show"))
                 {
                     Bot.PrintData(allCategory);
                     typeSentence = Bot.Prompt("Here you go, Choose one from the above types of solution");
                 }
                 type = Logic.ExtractKeyword(allCategory, typeSentence);
-                if (typeSentence.Contains("no"))
-                {
-                    return;
-                }
+                
             }
         }
 

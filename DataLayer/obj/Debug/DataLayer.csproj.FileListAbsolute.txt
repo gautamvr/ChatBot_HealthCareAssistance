@@ -35,3 +35,4 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
