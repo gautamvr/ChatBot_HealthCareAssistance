@@ -24,7 +24,7 @@ namespace BusinessLayer
 
         public static string GetDistinctSpecs()
         {
-            string totalSpecs = da.Execute("Select Distinct Spec1 from Monitors") +
+            string totalSpecs = da.Execute("Select Distinct Spec1 from Monitors") +"\n"+
                                 da.Execute("Select Distinct Spec2 from Monitors");
 
             return totalSpecs;
