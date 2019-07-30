@@ -78,7 +78,7 @@ namespace UILayer
             else
             {
                 Bot.PrintLine("These are the Monitor item(s) in your cart :");
-                Bot.PrintData(Logic.RetunList(Cart.Monitors));
+                Bot.PrintData(Logic.ReturnList(Cart.Monitors));
             }
 
             if (Cart.Solutions.Count == 0)
@@ -88,7 +88,7 @@ namespace UILayer
             else
             {
                 Bot.PrintLine("These are the Solution item(s) in your cart :");
-                Bot.PrintData(Logic.RetunList(Cart.Solutions));
+                Bot.PrintData(Logic.ReturnList(Cart.Solutions));
             }
 
             Bot.Prompt("I hope we have helped you in a proper way. Have a great day.");
@@ -151,7 +151,7 @@ namespace UILayer
                     GetMonitorsBasedOnSpecs();
                 }
                 Bot.PrintLine("These are the item(s) in your cart :");
-                Bot.PrintData(Logic.RetunList(Cart.Monitors));
+                Bot.PrintData(Logic.ReturnList(Cart.Monitors));
                 again = Bot.Prompt("Do you want to look for more products?");
                 if (again.Contains("no"))
                 {

@@ -11,7 +11,7 @@ namespace BusinessLayer
     
     public class Logic
     {
-        public static string RetunList(List<string> list)
+        public static string ReturnList(List<string> list)
         {
             string str = null;
             foreach (string listItem in list)
