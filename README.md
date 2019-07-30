@@ -1,7 +1,6 @@
-# Hello World Program
-A solution file which has a simple C# project with the code which prints "Hello World" in the console application
-
-It has the test project included which checks whether it prints the desired output (*Hello world*)
+# Chat Bot providing assistance
+A solution file which runs the chatbot console application. This application assists the end user in finding a suitable patient monitor/integrated solutions based on all products available along with the list of features of the product or a purchase suggestion based on specific features that the user prefers.
+It has the test projects included which checks if the functions behave as desired. 
 
 This repo also has NUnit console runner tool, which can be used to run the test cases.
 
