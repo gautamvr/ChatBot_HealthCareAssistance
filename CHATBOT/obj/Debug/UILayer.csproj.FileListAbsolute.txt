@@ -52,3 +52,15 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Debug\UILayer.cspr
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Debug\UILayer.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Debug\CHATBOT.exe
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\CHATBOT\obj\Debug\CHATBOT.pdb
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\CHATBOT.exe.config
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\CHATBOT.exe
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\CHATBOT.pdb
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\BusinessLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\DataLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\BusinessLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\bin\Debug\DataLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\obj\Debug\UILayer.csprojAssemblyReference.cache
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\obj\Debug\UILayer.csproj.CoreCompileInputs.cache
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\obj\Debug\UILayer.csproj.CopyComplete
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\obj\Debug\CHATBOT.exe
+C:\Bootcamp\ChatBot_CaseStudy\CHATBOT\obj\Debug\CHATBOT.pdb

@@ -25,3 +25,12 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Debug\Busine
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\BusinessLayer\obj\Debug\BusinessLayer.pdb

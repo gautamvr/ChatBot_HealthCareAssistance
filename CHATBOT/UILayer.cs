@@ -17,6 +17,7 @@ namespace UILayer
     {
         public static void Main(string[] args)
         {
+            
             string t = null;
             var userName = RegisterUser(out var userPhone,out var userEmail);
             Console.WriteLine("-------------------------------------------------------------------\n");
@@ -159,28 +160,20 @@ namespace UILayer
                 }
             }
         }
-
         private static void GetMonitorsBasedOnSpecs()
         {
-            Bot.PrintLine("These are the specifications which are available : ");
-            string allDistinctSpecs = MonitorAccessor.GetDistinctSpecs();
-            Bot.PrintData(allDistinctSpecs);
-            string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
-            allDistinctSpecs = allDistinctSpecs.ToLower();
-            string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
-            while (!(allDistinctSpecs.Contains(UserQuery)))
-            {
-                UserQuerySentence = Bot.Prompt("Sorry, No monitor is available for this specification.Please tell us any other specification.");
-                if (UserQuerySentence.Contains("show") || UserQuerySentence.Contains("all") ||
-                    UserQuerySentence.Contains("what"))
-                {
-                    Bot.PrintData(allDistinctSpecs);
-                    UserQuerySentence=Bot.Prompt("Here you go, These are all the different specifications that the monitors have. Please specify your need");
-                }
-                UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
-            }
-            Bot.PrintLine("Model Numbers with {0} as a specification are: ",UserQuery);
-            string modelsOnSpecs = MonitorAccessor.GetModelOnSpecifications(UserQuery);
+            Bot.PrintLine("These are the different specifications present ");
+            string AllSpec1 = Logic.GetAllSpec("Spec1");
+            string AllSpec2 = Logic.GetAllSpec("Spec2");
+            Bot.PrintData(AllSpec1);
+            string spec1num = Bot.Prompt("Please select the specification in the above category which you want to search for");
+            string spec1 = Logic.ReturnSpec(Int32.Parse(spec1num), "Spec1");
+            
+            Bot.PrintData(AllSpec2);
+            string spec2num = Bot.Prompt("Please select the specification in the above category which you want to search for");
+            string spec2 = Logic.ReturnSpec(Int32.Parse(spec2num), "Spec2");
+            Bot.PrintLine("Model Numbers with your required specifications are: ");
+            string modelsOnSpecs = MonitorAccessor.GetModelOnSpecifications(spec1,spec2);
             Bot.PrintData(modelsOnSpecs);
             string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
             string modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
@@ -189,8 +182,7 @@ namespace UILayer
                 while (!modelsOnSpecs.Contains(modelName))
                 {
                     modelNameSentence = Bot.Prompt(
-                        "The model you selected does not have {0} as a specification or is not available with us. Please enter the model name which has {0} as the specification",
-                        UserQuery);
+                        "The model you selected does not have the specification which you specified or is not available with us. Please enter the model name which has {0} as the specification");
                     modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
                 }
                 Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
@@ -204,15 +196,68 @@ namespace UILayer
                 if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
                 {
                     Bot.PrintData(modelsOnSpecs);
-                    modelNameSentence=Bot.Prompt("Here you go, These are the models of the specification '{0}'. Please choose one",UserQuery);
+                    modelNameSentence = Bot.Prompt("Here you go, These are the models of the specification which you specified. Please choose one");
                 }
                 modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
-                 if (modelNameSentence.Contains("no"))
-                 {
-                     return;
-                 }
+                if (modelNameSentence.Contains("no"))
+                {
+                    return;
+                }
             }
         }
+        //private static void GetMonitorsBasedOnSpecs()
+        //{
+        //    Bot.PrintLine("These are the specifications which are available : ");
+        //    string allDistinctSpecs = MonitorAccessor.GetDistinctSpecs();
+        //    Bot.PrintData(allDistinctSpecs);
+        //    string UserQuerySentence = Bot.Prompt("Please give me your specifications of the Monitor you are expecting");
+        //    allDistinctSpecs = allDistinctSpecs.ToLower();
+        //    string UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
+        //    while (!(allDistinctSpecs.Contains(UserQuery)))
+        //    {
+        //        UserQuerySentence = Bot.Prompt("Sorry, No monitor is available for this specification.Please tell us any other specification.");
+        //        if (UserQuerySentence.Contains("show") || UserQuerySentence.Contains("all") ||
+        //            UserQuerySentence.Contains("what"))
+        //        {
+        //            Bot.PrintData(allDistinctSpecs);
+        //            UserQuerySentence=Bot.Prompt("Here you go, These are all the different specifications that the monitors have. Please specify your need");
+        //        }
+        //        UserQuery = Logic.ExtractKeyword(allDistinctSpecs, UserQuerySentence);
+        //    }
+        //    Bot.PrintLine("Model Numbers with {0} as a specification are: ",UserQuery);
+        //    string modelsOnSpecs = MonitorAccessor.GetModelOnSpecifications(UserQuery);
+        //    Bot.PrintData(modelsOnSpecs);
+        //    string modelNameSentence = Bot.Prompt("Select the model you want to inquire about");
+        //    string modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
+        //    while (true)
+        //    {
+        //        while (!modelsOnSpecs.Contains(modelName))
+        //        {
+        //            modelNameSentence = Bot.Prompt(
+        //                "The model you selected does not have {0} as a specification or is not available with us. Please enter the model name which has {0} as the specification",
+        //                UserQuery);
+        //            modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
+        //        }
+        //        Bot.PrintData(MonitorAccessor.GetSpecification(modelName));
+        //        string buyMonitor = Bot.Prompt("Do you want to select this product?");
+        //        if (buyMonitor.Contains("yes"))
+        //        {
+        //            Cart.Monitors.Add(modelName);
+        //            Bot.PrintLine("The product is successfully added to your cart.");
+        //        }
+        //        modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
+        //        if (modelNameSentence.Contains("what") || modelNameSentence.Contains("show"))
+        //        {
+        //            Bot.PrintData(modelsOnSpecs);
+        //            modelNameSentence=Bot.Prompt("Here you go, These are the models of the specification '{0}'. Please choose one",UserQuery);
+        //        }
+        //        modelName = Logic.ExtractKeyword(modelsOnSpecs, modelNameSentence).ToUpper();
+        //         if (modelNameSentence.Contains("no"))
+        //         {
+        //             return;
+        //         }
+        //    }
+        //}
 
         private static void GetMonitorsBasedOnCategory()
         {

@@ -8,3 +8,12 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerT
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.dll
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.pdb
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csprojAssemblyReference.cache
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\bin\Debug\UILayerTest.dll
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\bin\Debug\UILayerTest.pdb
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.dll
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.pdb
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\bin\Debug\nunit.framework.xml
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CoreCompileInputs.cache
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CopyComplete
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.dll
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.pdb

@@ -42,75 +42,10 @@ namespace BusinessLayer
 
         }
 
-        public static string GetModelOnSpecifications(string UserQuery)
+        public static string GetModelOnSpecifications(string spec1, string spec2)
         {
-            //portability and touch screen
-            if (UserQuery.Contains("non-portable"))
-            {
-                if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='4.5'' Touch Screen'");
-
-                if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
-                if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='9'' Touch Screen'");
-                if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='12'' Touch Screen'");
-                if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='15'' Touch Screen'");
-            }
-
-            else if (UserQuery.Contains("portable") && (UserQuery.Contains("touch screen")))
-            {
-                if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='4.5'' Touch Screen'");
-                if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
-                if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='9'' Touch Screen'");
-                if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='12'' Touch Screen'");
-                if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen"))
-                    return da.Execute(
-                        "Select ModelNo from Monitors where Spec1='Portable' and Spec2='15'' Touch Screen'");
-            }
-
-            //portability only
-            if (UserQuery.Contains("non-portable") && !(UserQuery.Contains("touch screen")))
-                return da.Execute("Select ModelNo from Monitors where Spec1='Non-Portable'");
-            else if (UserQuery.Contains("portable") && !(UserQuery.Contains("touch screen")))
-                return da.Execute("Select ModelNo from Monitors where Spec1='Portable'");
-
-
-            //touch screen only
-            if (UserQuery.Contains("4.5'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
-                !(UserQuery.Contains("non-portable")))
-                return da.Execute(
-                    "Select ModelNo from Monitors where Spec2='4.5'' Touch Screen'");
-            if (UserQuery.Contains("5.5'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
-                !(UserQuery.Contains("non-portable")))
-                return da.Execute(
-                    "Select ModelNo from Monitors where Spec1='Non-Portable' and Spec2='5.5'' Touch Screen'");
-            if (UserQuery.Contains("9'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
-                !(UserQuery.Contains("non-portable")))
-                return da.Execute("Select ModelNo from Monitors where Spec2='9'' Touch Screen'");
-            if (UserQuery.Contains("12'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
-                !(UserQuery.Contains("non-portable")))
-                return da.Execute("Select ModelNo from Monitors where Spec2='12'' Touch Screen'");
-            if (UserQuery.Contains("15'") && UserQuery.Contains("touch screen") && !(UserQuery.Contains("portable")) &&
-                !(UserQuery.Contains("non-portable")))
-                return da.Execute("Select ModelNo from Monitors where Spec2='15'' Touch Screen'");
-
-            return da.Execute("Select ModelNo from Monitors where Spec1='" + UserQuery + "' or Spec2='" + UserQuery + "' or Spec3='" + UserQuery + "'");
+            return da.Execute(
+                        "Select ModelNo from Monitors where Spec1='"+spec1+"' and Spec2='"+spec2+"'");
         }
     }
 }

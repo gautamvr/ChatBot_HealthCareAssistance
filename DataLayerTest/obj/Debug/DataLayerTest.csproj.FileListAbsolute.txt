@@ -17,3 +17,16 @@ C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\Bouncy
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\MySql.Data.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\320050834\source\repos\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayerTest.dll.config
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayerTest.dll.config
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayerTest.dll
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayerTest.pdb
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayer.dll
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\nunit.framework.dll
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\DataLayer.pdb
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\nunit.framework.pdb
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\bin\Debug\nunit.framework.xml
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\obj\Debug\DataLayerTest.csprojAssemblyReference.cache
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\obj\Debug\DataLayerTest.csproj.CoreCompileInputs.cache
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\obj\Debug\DataLayerTest.csproj.CopyComplete
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\obj\Debug\DataLayerTest.dll
+C:\Bootcamp\ChatBot_CaseStudy\DataLayerTest\obj\Debug\DataLayerTest.pdb
