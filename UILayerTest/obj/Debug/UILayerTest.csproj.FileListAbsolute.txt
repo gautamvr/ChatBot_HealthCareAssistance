@@ -17,3 +17,4 @@ C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CoreCompi
 C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csproj.CopyComplete
 C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.dll
 C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.pdb
+C:\Bootcamp\ChatBot_CaseStudy\UILayerTest\obj\Debug\UILayerTest.csprojAssemblyReference.cache

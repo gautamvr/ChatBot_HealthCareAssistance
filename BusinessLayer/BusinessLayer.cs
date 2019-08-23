@@ -56,7 +56,7 @@ namespace BusinessLayer
             string[] distinctSpec = specArray.Split('\n');
             for (int i = 0; i < distinctSpec.Length; i++)
             {
-                specs.Add(i + 1, distinctSpec[i]);
+                specs.Add(i + 1, distinctSpec[i].TrimEnd());
             }
             return specs;
         }
@@ -65,7 +65,7 @@ namespace BusinessLayer
         {
             int totalVal = dict.Count;
             dict.Add(totalVal + 1, "Anything");
-            string str = string.Join("\n", dict.Select(x => x.Key + "  --->  " + x.Value).ToArray());
+            string str = string.Join("\n", dict.Select(x => x.Key + "  --->  " + x.Value.TrimEnd()).ToArray());
             return str;
         }
 

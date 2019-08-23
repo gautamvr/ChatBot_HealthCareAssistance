@@ -18,7 +18,7 @@ namespace DataLayerTest
         public void TestSqlDataExtractor()
         {
             DAL da=new DAL();
-            string TestData1 = "MX400     ";
+            string TestData1 = "MX400";
             string TestSQLquery = "Select ModelNo from Monitors where Id='1'";
             Assert.AreEqual(TestData1, da.Execute(TestSQLquery));
         }

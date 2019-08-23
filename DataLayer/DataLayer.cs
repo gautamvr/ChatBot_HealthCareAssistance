@@ -17,10 +17,7 @@ namespace DataLayer
         {
             get
             {
-                if (_connectionString == string.Empty)
-                {
-                    _connectionString = ConfigurationManager.AppSettings["connectionString"];
-                }
+                _connectionString = ConfigurationManager.AppSettings["connectionString"];
                 return _connectionString;
             }
         }
@@ -28,15 +25,8 @@ namespace DataLayer
         public SqlCommand GetCommand(string sql)
         {
             SqlConnection conn = new SqlConnection(ConnectionString);
-            if (conn == null)
-            {
-                throw new Exception("Connection Error");
-            }
+            
             SqlCommand sqlCmd = new SqlCommand(sql, conn);
-            if (sqlCmd == null)
-            {
-                throw new Exception("Command Error");
-            }
             return sqlCmd;
         }
 
@@ -45,11 +35,10 @@ namespace DataLayer
             DataTable dt = new DataTable();
             SqlCommand cmd = GetCommand(sql);
             cmd.Connection.Open();
-            
             dt.Load(cmd.ExecuteReader());
             cmd.Connection.Close();
             string res = string.Join("\n",
-                dt.Rows.OfType<DataRow>().Select(x => string.Join(" \n   ", x.ItemArray)));
+                dt.Rows.OfType<DataRow>().Select(x => string.Join("\n   ", x.ItemArray.Select(p=>p.ToString().TrimEnd()))));
             return res;
         }
     }

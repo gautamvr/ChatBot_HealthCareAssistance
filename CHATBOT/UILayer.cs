@@ -15,6 +15,7 @@ namespace UILayer
 
     class UILayer
     {
+        static Cart cart = new Cart();
         public static void Main(string[] args)
         {
             
@@ -72,24 +73,24 @@ namespace UILayer
         private static void EndConversation()
         {
 
-            if (Cart.Monitors.Count == 0)
+            if (cart.Monitors.Count == 0)
             {
                 Bot.PrintLine("You haven't added any Patient Monitors to your cart yet");
             }
             else
             {
                 Bot.PrintLine("These are the Monitor item(s) in your cart :");
-                Bot.PrintData(Logic.ReturnList(Cart.Monitors));
+                Bot.PrintData(Logic.ReturnList(cart.Monitors));
             }
 
-            if (Cart.Solutions.Count == 0)
+            if (cart.Solutions.Count == 0)
             {
                 Bot.PrintLine("You haven't added any Solutions to your cart yet");
             }
             else
             {
                 Bot.PrintLine("These are the Solution item(s) in your cart :");
-                Bot.PrintData(Logic.ReturnList(Cart.Solutions));
+                Bot.PrintData(Logic.ReturnList(cart.Solutions));
             }
 
             Bot.Prompt("I hope we have helped you in a proper way. Have a great day.");
@@ -152,7 +153,7 @@ namespace UILayer
                     GetMonitorsBasedOnSpecs();
                 }
                 Bot.PrintLine("These are the item(s) in your cart :");
-                Bot.PrintData(Logic.ReturnList(Cart.Monitors));
+                Bot.PrintData(Logic.ReturnList(cart.Monitors));
                 again = Bot.Prompt("Do you want to look for more products?");
                 if (again.Contains("no"))
                 {
@@ -189,7 +190,7 @@ namespace UILayer
                 string buyMonitor = Bot.Prompt("Do you want to select this product?");
                 if (buyMonitor.Contains("yes"))
                 {
-                    Cart.Monitors.Add(modelName);
+                    cart.Monitors.Add(modelName);
                     Bot.PrintLine("The product is successfully added to your cart.");
                 }
                 modelNameSentence = Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
@@ -288,7 +289,7 @@ namespace UILayer
                 string buyMonitor = Bot.Prompt("Do you want to select this product?");
                 if (buyMonitor.Contains("yes"))
                 {
-                    Cart.Monitors.Add(modelName);
+                    cart.Monitors.Add(modelName);
                     Bot.PrintLine("The product is successfully added to your cart.");
                 }
                 modelNameSentence =Bot.Prompt("Do you want the full specifications for more models? If Yes, Please specify the Model name.");
@@ -410,7 +411,7 @@ namespace UILayer
                 string addcartSolution = Bot.Prompt("Do you want to Select this solution");
                 if (addcartSolution.Contains("yes"))
                 {
-                    Cart.Solutions.Add(type);
+                    cart.Solutions.Add(type);
                     Bot.PrintLine("The solution {0} is now added to your cart", type);
                 }
                 solnNameSentence = Bot.Prompt("Do you want to look for more solutions of the type '{0}' ? Mention the solution you want to choose.", type);

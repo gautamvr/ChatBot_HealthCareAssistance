@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public static class Cart
+    public class Cart
     {
-        public static List<string> Monitors = new List<string>();
-        public static List<string> Solutions = new List<string>();
+        public List<String> Monitors { get; set; }
+        public List<String> Solutions { get; set; }
     }
 }

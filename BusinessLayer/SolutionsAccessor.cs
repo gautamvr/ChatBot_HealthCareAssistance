@@ -31,28 +31,21 @@ namespace BusinessLayer
 
         public static string GetPurpose(string UserQuery)
         {
-            //Find out the soln that matches user purpose
-            if (UserQuery.Contains("decision") || (UserQuery.Contains("support")) || (UserQuery.Contains("help")))
+            var querybase = new Dictionary<string, string>()
             {
-                return GetSolution("Clinical Decision Support");
-            }
-
-            else if (UserQuery.Contains((" surveillance")) || (UserQuery.Contains("surveillancing")) ||
-                     UserQuery.Contains("alarming") || UserQuery.Contains("alarm"))
-            {
-                return GetSolution("CSA");
-            }
-
-            else if (UserQuery.Contains((" emergency")) || (UserQuery.Contains("warning")) ||
-                     UserQuery.Contains("score") || UserQuery.Contains("early"))
-            {
-                return GetSolution("EWES");
-            }
-
-            else
-            {
-                return "null";
-            }
+                { "decision" , "Clinical Decision Support" },
+                {"support", "Clinical Decision Support"},
+                {"help", "Clinical Decision Support" },
+                {"surveillance","CSA" },
+                {"surveillancing","CSA" },
+                {"alarming","CSA" },
+                {"alarm","CSA" },
+                {"emergency","EWES" },
+                {"score","EWES" },
+                {"warning","EWES" },
+                {"early","EWES" }
+            };
+            return GetSolution(querybase[UserQuery]);
         }
     }
 }
