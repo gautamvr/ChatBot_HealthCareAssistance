@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri1.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri1.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri1.org/">
+      <s:element name="GetAllStudents">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllStudentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllStudentsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllRecords">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllRecordsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllRecordsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllStudentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllStudents" />
+  </wsdl:message>
+  <wsdl:message name="GetAllStudentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRecordsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllRecords" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRecordsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllRecordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StudentDataServiceSoap">
+    <wsdl:operation name="GetAllStudents">
+      <wsdl:input message="tns:GetAllStudentsSoapIn" />
+      <wsdl:output message="tns:GetAllStudentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecords">
+      <wsdl:input message="tns:GetAllRecordsSoapIn" />
+      <wsdl:output message="tns:GetAllRecordsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StudentDataServiceSoap" type="tns:StudentDataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllStudents">
+      <soap:operation soapAction="http://tempuri1.org/GetAllStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecords">
+      <soap:operation soapAction="http://tempuri1.org/GetAllRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StudentDataServiceSoap12" type="tns:StudentDataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllStudents">
+      <soap12:operation soapAction="http://tempuri1.org/GetAllStudents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecords">
+      <soap12:operation soapAction="http://tempuri1.org/GetAllRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StudentDataService">
+    <wsdl:port name="StudentDataServiceSoap" binding="tns:StudentDataServiceSoap">
+      <soap:address location="https://localhost:44329/StudentDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StudentDataServiceSoap12" binding="tns:StudentDataServiceSoap12">
+      <soap12:address location="https://localhost:44329/StudentDataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

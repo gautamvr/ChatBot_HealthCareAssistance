@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\WebApiClient\bin\Debug\WebApiClient.exe.config
+C:\DoTNET_Training\WCFApps\WebApiClient\bin\Debug\WebApiClient.exe
+C:\DoTNET_Training\WCFApps\WebApiClient\bin\Debug\WebApiClient.pdb
+C:\DoTNET_Training\WCFApps\WebApiClient\obj\Debug\WebApiClient.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WebApiClient\obj\Debug\WebApiClient.exe
+C:\DoTNET_Training\WCFApps\WebApiClient\obj\Debug\WebApiClient.pdb
+C:\DoTNET_Training\WCFApps\WebApiClient\obj\Debug\WebApiClient.csprojAssemblyReference.cache

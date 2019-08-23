@@ -1,0 +1,10 @@
+﻿Installing assembly 'C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.InstallLog
+   assemblypath = C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe
+Committing assembly 'C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.InstallLog
+   assemblypath = C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe

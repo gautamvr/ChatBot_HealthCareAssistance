@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChatBotDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SeriesName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="ModelNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Spec1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Spec2" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Spec3" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ChatBotDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Monitors" EntityType="Self.Monitor" />
+  </EntityContainer>
+</Schema>

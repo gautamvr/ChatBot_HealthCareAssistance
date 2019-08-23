@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe.config
+C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.exe
+C:\DoTNET_Training\WCFApps\WcfWinService\bin\Debug\WcfWinService.pdb
+C:\DoTNET_Training\WCFApps\WcfWinService\obj\Debug\WcfWinService.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\WcfWinService\obj\Debug\WcfWinService.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WcfWinService\obj\Debug\WcfWinService.exe
+C:\DoTNET_Training\WCFApps\WcfWinService\obj\Debug\WcfWinService.pdb

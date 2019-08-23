@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\WcfClient\bin\Debug\WcfClient.exe.config
+C:\DoTNET_Training\WCFApps\WcfClient\bin\Debug\WcfClient.exe
+C:\DoTNET_Training\WCFApps\WcfClient\bin\Debug\WcfClient.pdb
+C:\DoTNET_Training\WCFApps\WcfClient\obj\Debug\WcfClient.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\WcfClient\obj\Debug\WcfClient.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WcfClient\obj\Debug\WcfClient.exe
+C:\DoTNET_Training\WCFApps\WcfClient\obj\Debug\WcfClient.pdb

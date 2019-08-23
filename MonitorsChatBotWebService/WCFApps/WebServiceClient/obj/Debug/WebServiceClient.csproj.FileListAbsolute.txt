@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\WebServiceClient\bin\Debug\WebServiceClient.exe.config
+C:\DoTNET_Training\WCFApps\WebServiceClient\bin\Debug\WebServiceClient.exe
+C:\DoTNET_Training\WCFApps\WebServiceClient\bin\Debug\WebServiceClient.pdb
+C:\DoTNET_Training\WCFApps\WebServiceClient\obj\Debug\WebServiceClient.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\WebServiceClient\obj\Debug\WebServiceClient.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WebServiceClient\obj\Debug\WebServiceClient.exe
+C:\DoTNET_Training\WCFApps\WebServiceClient\obj\Debug\WebServiceClient.pdb

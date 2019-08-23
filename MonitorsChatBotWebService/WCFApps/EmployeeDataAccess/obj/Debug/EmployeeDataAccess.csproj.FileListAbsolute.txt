@@ -1,0 +1,12 @@
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll.config
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EntityFramework.dll
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EntityFramework.xml
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
+C:\DoTNET_Training\WCFApps\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb

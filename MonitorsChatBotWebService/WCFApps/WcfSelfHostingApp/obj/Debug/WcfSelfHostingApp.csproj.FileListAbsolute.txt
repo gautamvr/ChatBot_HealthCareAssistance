@@ -1,0 +1,10 @@
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\bin\Debug\WcfSelfHostingApp.exe.config
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\bin\Debug\WcfSelfHostingApp.exe
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\bin\Debug\WcfSelfHostingApp.pdb
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\bin\Debug\Newtonsoft.Json.dll
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\bin\Debug\Newtonsoft.Json.xml
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\obj\Debug\WcfSelfHostingApp.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\obj\Debug\WcfSelfHostingApp.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\obj\Debug\WcfSelfHostingApp.csproj.CopyComplete
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\obj\Debug\WcfSelfHostingApp.exe
+C:\DoTNET_Training\WCFApps\WcfSelfHostingApp\obj\Debug\WcfSelfHostingApp.pdb

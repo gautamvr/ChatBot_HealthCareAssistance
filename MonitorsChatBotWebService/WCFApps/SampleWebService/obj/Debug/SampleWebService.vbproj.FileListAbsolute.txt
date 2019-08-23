@@ -1,0 +1,11 @@
+C:\DoTNET_Training\WCFApps\SampleWebService\bin\SampleWebService.dll.config
+C:\DoTNET_Training\WCFApps\SampleWebService\bin\SampleWebService.dll
+C:\DoTNET_Training\WCFApps\SampleWebService\bin\SampleWebService.pdb
+C:\DoTNET_Training\WCFApps\SampleWebService\bin\SampleWebService.xml
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.vbprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.Resources.resources
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.vbproj.GenerateResource.cache
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.vbproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.dll
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.xml
+C:\DoTNET_Training\WCFApps\SampleWebService\obj\Debug\SampleWebService.pdb

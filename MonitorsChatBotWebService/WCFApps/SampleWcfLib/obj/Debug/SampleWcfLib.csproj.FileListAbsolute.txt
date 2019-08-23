@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\SampleWcfLib\obj\Debug\SampleWcfLib.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\SampleWcfLib\obj\Debug\SampleWcfLib.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\SampleWcfLib\bin\Debug\SampleWcfLib.dll.config
+C:\DoTNET_Training\WCFApps\SampleWcfLib\bin\Debug\SampleWcfLib.dll
+C:\DoTNET_Training\WCFApps\SampleWcfLib\bin\Debug\SampleWcfLib.pdb
+C:\DoTNET_Training\WCFApps\SampleWcfLib\obj\Debug\SampleWcfLib.dll
+C:\DoTNET_Training\WCFApps\SampleWcfLib\obj\Debug\SampleWcfLib.pdb

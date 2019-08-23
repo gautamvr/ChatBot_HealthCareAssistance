@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\CrossMachineClient\bin\Debug\CrossMachineClient.exe.config
+C:\DoTNET_Training\WCFApps\CrossMachineClient\bin\Debug\CrossMachineClient.exe
+C:\DoTNET_Training\WCFApps\CrossMachineClient\bin\Debug\CrossMachineClient.pdb
+C:\DoTNET_Training\WCFApps\CrossMachineClient\obj\Debug\CrossMachineClient.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\CrossMachineClient\obj\Debug\CrossMachineClient.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\CrossMachineClient\obj\Debug\CrossMachineClient.exe
+C:\DoTNET_Training\WCFApps\CrossMachineClient\obj\Debug\CrossMachineClient.pdb

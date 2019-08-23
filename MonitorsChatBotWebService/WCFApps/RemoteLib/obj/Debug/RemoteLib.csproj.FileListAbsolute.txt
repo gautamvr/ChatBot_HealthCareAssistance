@@ -1,0 +1,6 @@
+C:\DoTNET_Training\WCFApps\RemoteLib\bin\Debug\RemoteLib.dll
+C:\DoTNET_Training\WCFApps\RemoteLib\bin\Debug\RemoteLib.pdb
+C:\DoTNET_Training\WCFApps\RemoteLib\obj\Debug\RemoteLib.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\RemoteLib\obj\Debug\RemoteLib.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\RemoteLib\obj\Debug\RemoteLib.dll
+C:\DoTNET_Training\WCFApps\RemoteLib\obj\Debug\RemoteLib.pdb

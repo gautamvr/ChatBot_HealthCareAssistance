@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\EmployeeService\bin\EmployeeService.dll.config
+C:\DoTNET_Training\WCFApps\EmployeeService\bin\EmployeeService.dll
+C:\DoTNET_Training\WCFApps\EmployeeService\bin\EmployeeService.pdb
+C:\DoTNET_Training\WCFApps\EmployeeService\obj\Debug\EmployeeService.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\EmployeeService\obj\Debug\EmployeeService.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\EmployeeService\obj\Debug\EmployeeService.dll
+C:\DoTNET_Training\WCFApps\EmployeeService\obj\Debug\EmployeeService.pdb

@@ -1,0 +1,7 @@
+C:\DoTNET_Training\WCFApps\WebApplication1\bin\WebApplication1.dll.config
+C:\DoTNET_Training\WCFApps\WebApplication1\bin\WebApplication1.dll
+C:\DoTNET_Training\WCFApps\WebApplication1\bin\WebApplication1.pdb
+C:\DoTNET_Training\WCFApps\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\WebApplication1\obj\Debug\WebApplication1.dll
+C:\DoTNET_Training\WCFApps\WebApplication1\obj\Debug\WebApplication1.pdb

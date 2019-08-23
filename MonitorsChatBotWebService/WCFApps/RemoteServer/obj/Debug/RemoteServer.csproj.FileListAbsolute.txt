@@ -1,0 +1,10 @@
+C:\DoTNET_Training\WCFApps\RemoteServer\bin\Debug\RemoteServer.exe.config
+C:\DoTNET_Training\WCFApps\RemoteServer\bin\Debug\RemoteServer.exe
+C:\DoTNET_Training\WCFApps\RemoteServer\bin\Debug\RemoteServer.pdb
+C:\DoTNET_Training\WCFApps\RemoteServer\bin\Debug\RemoteLib.dll
+C:\DoTNET_Training\WCFApps\RemoteServer\bin\Debug\RemoteLib.pdb
+C:\DoTNET_Training\WCFApps\RemoteServer\obj\Debug\RemoteServer.csprojAssemblyReference.cache
+C:\DoTNET_Training\WCFApps\RemoteServer\obj\Debug\RemoteServer.csproj.CoreCompileInputs.cache
+C:\DoTNET_Training\WCFApps\RemoteServer\obj\Debug\RemoteServer.csproj.CopyComplete
+C:\DoTNET_Training\WCFApps\RemoteServer\obj\Debug\RemoteServer.exe
+C:\DoTNET_Training\WCFApps\RemoteServer\obj\Debug\RemoteServer.pdb
