@@ -211,5 +211,13 @@ namespace BusinessLayerTest
             Assert.AreEqual(output1, SolutionsAccessor.GetDescription(test1));
             Assert.AreEqual(output2, SolutionsAccessor.GetDescription(test2));
         }
+
+        [Test]
+        public void TestGetPurpose()
+        {
+            string testinput1 = "alarm";
+            string output1 = "ISAR\nISEM\nIVIC-Xi";
+            Assert.AreEqual(output1, SolutionsAccessor.GetPurpose(testinput1));
+        }
     }
 }

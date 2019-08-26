@@ -37,7 +37,6 @@ namespace BusinessLayer
             sent = sent.ToLower();
             data = data.ToLower();
             string[] strBase = data.Split('\n');
-            
             foreach (string str in strBase)
             {
                 string newStr = str.TrimEnd();
@@ -79,9 +78,7 @@ namespace BusinessLayer
         public static string ReturnSpec(int sno,string spec)
         {
             Dictionary<int, string> specdict = AssignDict(spec);
-
             return specdict[sno];
-
         }
 
     }
