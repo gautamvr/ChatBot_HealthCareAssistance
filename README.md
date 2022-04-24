@@ -1,4 +1,4 @@
-# Chat Bot providing assistance
+# Chat-Bot providing Healthcare assistance
 
 This application assists the end user in finding a suitable patient monitor/integrated solutions based on all products available along with the list of features of the product or a purchase suggestion based on specific features that the user prefers.
 It has the test projects included which checks if the functions behave as desired. 
