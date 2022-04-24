@@ -16,3 +16,5 @@ This batch file builds, runs and reports a pass-fail-status. It gives an exit-co
 NOTE : This application uses SQL server database to access the data for Patient monitors. This SQL server is remotely connected which uses the server's host computer's IP Address in the app.config file. This can be connected only when the user and the host computer are in the same network.
 
   
+## UML Design Diagram:
+![alt-text](https://github.com/gautamvr/ChatBot_HealthCareAssistance/blob/master/ChatBotDesignNew.png)
